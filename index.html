@@ -1,86 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GM Global</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icon/favicon-16x16.png"
+    />
+  </head>
 
-</head>
-<body>
-    <header class="container">
-        <div class="page-header">
-            <a href="#" class="header-logo logo">
-                <svg width="145" height="45.94" aria-label="Logo">
-                    <use href="./images/icon-sprite.svg#logo-header"></use>
-                </svg>
+  <body>
+    <header class="header container">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link--open">
+          <svg
+            width="145"
+            height="45.94"
+            aria-label="Logo"
+            class="header__logo-svg"
+          >
+            <use href="./images/icon-sprite.svg#logo-header"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__logo-link--close is-open">
+          <svg
+            width="145"
+            height="45.94"
+            aria-label="Logo"
+            class="header__logo-svg"
+          >
+            <use href="./images/icon-sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+        <button class="header__lang-button">
+          <div class="header__lang-svg header__lang-svg--en">
+            <svg width="23" height="23" class="header__lang-svg--img">
+              <use href="./images/icon-sprite.svg#en"></use>
+            </svg>
+            AR
+          </div>
+          <div class="header__lang-svg header__lang-svg--ar active">
+            EN
+            <svg width="23" height="23">
+              <use href="./images/icon-sprite.svg#ar"></use>
+            </svg>
+          </div>
+        </button>
+
+        <button type="button" aria-expanded="false" class="header__menu-button">
+          <svg
+            width="26.06"
+            height="26.06"
+            aria-label="menu-switch"
+            class="header__menu-open"
+          >
+            <use href="./images/icon-sprite.svg#menu"></use>
+          </svg>
+          <svg
+            width="26.06"
+            height="26.06"
+            aria-label="menu-switch"
+            class="header__menu-close is-open"
+          >
+            <use href="./images/icon-sprite.svg#menu-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header__menu">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">First screen</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Services and Products</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Why work with us?</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Who we are?</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__contact-list">
+          <li class="header__contact-item">
+            <a href="#" class="header__contact-link">
+              <svg width="10" height="16" class="header__contact-svg">
+                <use href="./images/icon-sprite.svg#geo"></use>
+              </svg>
+              5C77+QV2 Parakar 0069
+              <br />
+              <span> Yerevan, Armenia </span>
             </a>
-            <button type="button" class="menu__button" aria-expanded="false" data-menu-button>
-                <svg 
-                width="26.06" height="26.06" 
-                aria-label="menu-switch">
-                    <use class="button-close"href="./images/icon-sprite.svg#menu"></use>
-                    <use class="button-open is-open" width="26.06"href="./images/icon-sprite.svg#menu-open"></use>
-                </svg>
-            </button>
-            </div>
-
-            <div class="menu" data-menu>
-                <nav class="navigation">
-                    <ul class="nav">
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">First screen</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Services and Products</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Why work with us?</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Who we are?</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-                    <ul class="contact">
-                        <li class="contact__item">
-                            <a class="contact__link phone__link" href="#">
-                                <svg class="contact__icon" width="10" height="16">
-                                    <use href="./images/icon-sprite.svg#geo"></use>
-                                </svg>
-                                5C77+QV2 Parakar 0069 
-                                <br>
-                                    Yerevan, Armenia
-                            </a>
-                        </li>
-                        <li class="contact__item">
-                            <a class="contact__link mail__link" href="info@gmg.am">
-                                <svg class="contact__icon" width="16" height="12">
-                                    <use href="./images/icon-sprite.svg#letter"></use>
-                                </svg>
-                                info@gmg.am
-                            </a>
-                        </li>
-                        <li class="contact__item">
-                            <a class="contact__link phone__link" href="tel:+374 98 88-88-05">
-                                <svg class="contact__icon" width="10" height="16">
-                                    <use href="./images/icon-sprite.svg#phone"></use>
-                                </svg>
-                                +374 98 88-88-05</a>
-                        </li>
-                        <li class="contact__item">
-                            <a class="contact__link phone__link" href="tel:+380961111111">
-                                Request a call</a>
-                        </li>
-                    </ul>
-
-        </div>
+          </li>
+          <li class="header__contact-item">
+            <a href="info@gmg.am" class="header__contact-link">
+              <svg width="16" height="12" class="header__contact-svg">
+                <use href="./images/icon-sprite.svg#letter"></use>
+              </svg>
+              info@gmg.am
+            </a>
+          </li>
+          <li class="header__contact-item">
+            <a href="tel:+374 98 88-88-05" class="header__contact-link">
+              <svg width="10" height="16" class="header__contact-svg">
+                <use href="./images/icon-sprite.svg#phone"></use>
+              </svg>
+              +374 98 88-88-05</a
+            >
+          </li>
+          <li class="header__contact-item">
+            <a href="tel:+380961111111" class="header__contact-link header__contact-link--request">
+              Request a call
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main></main>
     <footer></footer>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
