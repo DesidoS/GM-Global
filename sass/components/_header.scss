@@ -46,7 +46,6 @@ body {
   }
   @include large-screen {
     display: block;
-    // right: 15px;
     right: 0;
   }
 }
@@ -56,6 +55,12 @@ body {
   justify-content: space-between;
   padding-left: 1px;
   padding-right: 7px;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+
   &.active {
     display: none;
   }
@@ -154,6 +159,12 @@ body {
 
 .header__nav-link {
   color: #fff;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+
   &:hover,
   &:focus {
     color: #c0c0c0;
@@ -173,19 +184,31 @@ body {
   flex-direction: column;
   align-items: center;
   color: #fff;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+
   &:hover,
   &:focus {
     color: #c0c0c0;
   }
 }
 .header__contact-link--request {
-  &:hover,
-  &:focus {
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+
+  // &:hover,
+  // &:focus {
     color: #f47133;
     border-bottom: 1.5px dashed #f47133;
     width: max-content;
     margin: 0 auto;
-  }
+  // }
 }
 
 .header__contact-item {
