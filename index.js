@@ -1,52 +1,37 @@
-(() => {
-  const mobileHeaderContainerRef = document.querySelector(".header-backdrop");
-  const mobileHeaderRef = document.querySelector(".header");
-  const mobileContactRef = document.querySelector(".header__contact-list");
-  const mobileContactGeoRef = document.querySelector(
-    ".header__contact-item--geo"
-  );
-  const mobileContactMailRef = document.querySelector(
-    ".header__contact-item--mail"
-  );
-  const mobileHeaderNavListRef = document.querySelector(".header__nav-list");
-  const mobileContactLinkRef = document.querySelectorAll(
-    ".header__contact-link"
-  );
-  const mobileContactItemRef = document.querySelectorAll(
-    ".header__contact-svg"
-  );
-  const mobileContactAdditionRef = document.querySelectorAll(
+const header = {
+  container: document.querySelector(".header-backdrop"),
+  element: document.querySelector(".header"),
+  contact: document.querySelector(".header__contact-list"),
+  contactGeo: document.querySelector(".header__contact-item--geo"),
+  contactMail: document.querySelector(".header__contact-item--mail"),
+  navList: document.querySelector(".header__nav-list"),
+  contactLinks: document.querySelectorAll(".header__contact-link"),
+  contactItems: document.querySelectorAll(".header__contact-svg"),
+  contactAdditions: document.querySelectorAll(
     ".header__contact-item--addition"
-  );
+  ),
+  menuBtn: document.querySelector(".header__menu-button"),
+  menuClose: document.querySelector(".header__menu-close"),
+  langBtn: document.querySelector(".header__lang-button"),
+  logo: document.querySelector(".header__logo-svg"),
+  logoFooter: document.querySelector(".header__logo-svg--footer"),
+};
 
-  const menuBtnRef = document.querySelector(".header__menu-button");
-  const mobileMenuRef = document.querySelector(".header__menu-close");
-  const mobileMenuBtnRef = document.querySelector(".header__menu-button");
-  const mobileLangBtnRef = document.querySelector(".header__lang-button");
-  const mobileLogoRef = document.querySelector(".header__logo-svg");
-  const mobileLogoFooterRef = document.querySelector(
-    ".header__logo-svg--footer"
-  );
-
-  menuBtnRef.addEventListener("click", () => {
-    mobileContactItemRef.forEach((item) => item.classList.toggle("is-open"));
-    mobileContactLinkRef.forEach((item) => item.classList.toggle("is-open"));
-    mobileContactAdditionRef.forEach((item) =>
-      item.classList.toggle("is-open")
-    );
-    mobileContactMailRef.classList.toggle("is-open");
-    mobileContactGeoRef.classList.toggle("is-open");
-    mobileContactRef.classList.toggle("is-open");
-    mobileHeaderNavListRef.classList.toggle("is-open");
-    mobileHeaderContainerRef.classList.toggle("is-open");
-    mobileHeaderRef.classList.toggle("is-open");
-    mobileLangBtnRef.classList.toggle("is-open");
-    mobileLogoRef.classList.toggle("is-open");
-    mobileLogoFooterRef.classList.toggle("is-open");
-    mobileMenuRef.classList.toggle("is-open");
-    mobileMenuBtnRef.classList.toggle("is-open");
-  });
-})();
+header.menuBtn.addEventListener("click", () => {
+  header.contactItems.forEach((item) => item.classList.toggle("is-open"));
+  header.contactLinks.forEach((item) => item.classList.toggle("is-open"));
+  header.contactAdditions.forEach((item) => item.classList.toggle("is-open"));
+  header.contactMail.classList.toggle("is-open");
+  header.contactGeo.classList.toggle("is-open");
+  header.contact.classList.toggle("is-open");
+  header.navList.classList.toggle("is-open");
+  header.container.classList.toggle("is-open");
+  header.element.classList.toggle("is-open");
+  header.langBtn.classList.toggle("is-open");
+  header.logo.classList.toggle("is-open");
+  header.logoFooter.classList.toggle("is-open");
+  header.menuClose.classList.toggle("is-open");
+});
 
 const button = document.querySelector(".header__lang-button");
 const enSvg = document.querySelector(".header__lang-svg--en");
