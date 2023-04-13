@@ -1,43 +1,58 @@
 (() => {
-  const menuRef = document.querySelector(".header__menu");
+  const mobileHeaderContainerRef = document.querySelector(".header-backdrop");
+  const mobileHeaderRef = document.querySelector(".header");
+  const mobileContactRef = document.querySelector(".header__contact-list");
+  const mobileContactGeoRef = document.querySelector(
+    ".header__contact-item--geo"
+  );
+  const mobileContactMailRef = document.querySelector(
+    ".header__contact-item--mail"
+  );
+  const mobileHeaderNavListRef = document.querySelector(".header__nav-list");
+  const mobileContactLinkRef = document.querySelectorAll(
+    ".header__contact-link"
+  );
+  const mobileContactItemRef = document.querySelectorAll(
+    ".header__contact-svg"
+  );
+  const mobileContactAdditionRef = document.querySelectorAll(
+    ".header__contact-item--addition"
+  );
+
   const menuBtnRef = document.querySelector(".header__menu-button");
-  const menuBtnOpenRef = document.querySelector(".header__menu-open");
-  const menuBtnCloseRef = document.querySelector(".header__menu-close");
-  const bodyRef = document.querySelector("body");
-  const logoOpenRef = document.querySelector(".header__logo-link--open");
-  const logoCloseRef = document.querySelector(".header__logo-link--close");
-  const langRef = document.querySelector(".header__lang-button");
-
-
-  // const mobileMenuRef = document.querySelector("[data-menu]");
-  //   const scrollHiddenRef = document.querySelector("[data-menu-scroll]");
+  const mobileMenuRef = document.querySelector(".header__menu-close");
+  const mobileMenuBtnRef = document.querySelector(".header__menu-button");
+  const mobileLangBtnRef = document.querySelector(".header__lang-button");
+  const mobileLogoRef = document.querySelector(".header__logo-svg");
+  const mobileLogoFooterRef = document.querySelector(
+    ".header__logo-svg--footer"
+  );
 
   menuBtnRef.addEventListener("click", () => {
-    const expanded =
-      menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-
-    langRef.classList.toggle("is-open");
-    menuRef.classList.toggle("is-open");
-    logoCloseRef.classList.toggle("is-open");
-    logoOpenRef.classList.toggle("is-open");
-    bodyRef.classList.toggle("is-open");
-    menuBtnRef.classList.toggle("is-open");
-    menuBtnOpenRef.classList.toggle("is-open");
-    menuBtnCloseRef.classList.toggle("is-open");
-    menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-    // mobileMenuRef.classList.toggle("is-open");
-    // scrollHiddenRef.classList.toggle("is-open");
+    mobileContactItemRef.forEach((item) => item.classList.toggle("is-open"));
+    mobileContactLinkRef.forEach((item) => item.classList.toggle("is-open"));
+    mobileContactAdditionRef.forEach((item) =>
+      item.classList.toggle("is-open")
+    );
+    mobileContactMailRef.classList.toggle("is-open");
+    mobileContactGeoRef.classList.toggle("is-open");
+    mobileContactRef.classList.toggle("is-open");
+    mobileHeaderNavListRef.classList.toggle("is-open");
+    mobileHeaderContainerRef.classList.toggle("is-open");
+    mobileHeaderRef.classList.toggle("is-open");
+    mobileLangBtnRef.classList.toggle("is-open");
+    mobileLogoRef.classList.toggle("is-open");
+    mobileLogoFooterRef.classList.toggle("is-open");
+    mobileMenuRef.classList.toggle("is-open");
+    mobileMenuBtnRef.classList.toggle("is-open");
   });
 })();
 
-(() => {
-  const langRef = document.querySelector(".header__lang-button");
-  const langEnSvgRef = document.querySelector(".header__lang-svg--en");
-  const langArSvgRef = document.querySelector(".header__lang-svg--ar");
+const button = document.querySelector(".header__lang-button");
+const enSvg = document.querySelector(".header__lang-svg--en");
+const arSvg = document.querySelector(".header__lang-svg--ar");
 
-  langRef.addEventListener("click", () => {
-    langEnSvgRef.classList.toggle("active");
-    langArSvgRef.classList.toggle("active");
-  });
-})();
+button.addEventListener("click", () => {
+  enSvg.classList.toggle("enActive");
+  arSvg.classList.toggle("arActive");
+});

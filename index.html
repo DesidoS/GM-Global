@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GM Global</title>
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    /> -->
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
     <link
       rel="icon"
@@ -16,121 +22,213 @@
       sizes="16x16"
       href="/icon/favicon-16x16.png"
     />
+    <style>
+      @media (max-width: 1024px) {
+        .hero-container {
+          background-image: url("/images/hero-bg-mobile.jpg");
+          background-size: cover;
+          height: 680px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <header class="header container">
-      <div class="header__logo">
-        <a href="#" class="header__logo-link--open">
-          <svg
-            width="145"
-            height="45.94"
-            aria-label="Logo"
-            class="header__logo-svg"
-          >
-            <use href="./images/icon-sprite.svg#logo-header"></use>
-          </svg>
-        </a>
-        <a href="#" class="header__logo-link--close is-open">
-          <svg
-            width="145"
-            height="45.94"
-            aria-label="Logo"
-            class="header__logo-svg"
-          >
-            <use href="./images/icon-sprite.svg#logo-footer"></use>
-          </svg>
-        </a>
-        <button class="header__lang-button">
-          <div class="header__lang-svg header__lang-svg--en">
-            <svg width="23" height="23" class="header__lang-svg--img">
-              <use href="./images/icon-sprite.svg#en"></use>
-            </svg>
-            AR
-          </div>
-          <div class="header__lang-svg header__lang-svg--ar active">
-            EN
-            <svg width="23" height="23">
-              <use href="./images/icon-sprite.svg#ar"></use>
-            </svg>
-          </div>
-        </button>
-
-        <button type="button" aria-expanded="false" class="header__menu-button">
-          <svg
-            width="26.06"
-            height="26.06"
-            aria-label="menu-switch"
-            class="header__menu-open"
-          >
-            <use href="./images/icon-sprite.svg#menu"></use>
-          </svg>
-          <svg
-            width="26.06"
-            height="26.06"
-            aria-label="menu-switch"
-            class="header__menu-close is-open"
-          >
-            <use href="./images/icon-sprite.svg#menu-open"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="header__menu">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">First screen</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Services and Products</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Why work with us?</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Who we are?</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header__contact-list">
-          <li class="header__contact-item">
-            <a href="#" class="header__contact-link">
-              <svg width="10" height="16" class="header__contact-svg">
-                <use href="./images/icon-sprite.svg#geo"></use>
-              </svg>
-              5C77+QV2 Parakar 0069
-              <br />
-              <span> Yerevan, Armenia </span>
-            </a>
-          </li>
-          <li class="header__contact-item">
-            <a href="info@gmg.am" class="header__contact-link">
-              <svg width="16" height="12" class="header__contact-svg">
-                <use href="./images/icon-sprite.svg#letter"></use>
-              </svg>
-              info@gmg.am
-            </a>
-          </li>
-          <li class="header__contact-item">
-            <a href="tel:+374 98 88-88-05" class="header__contact-link">
-              <svg width="10" height="16" class="header__contact-svg">
-                <use href="./images/icon-sprite.svg#phone"></use>
-              </svg>
-              +374 98 88-88-05</a
+    <div class="header-backdrop"></div>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">
+            <svg
+              width="145"
+              height="45.94"
+              aria-label="Logo"
+              class="header__logo-svg"
             >
-          </li>
-          <li class="header__contact-item">
-            <a href="tel:+380961111111" class="header__contact-link header__contact-link--request">
-              Request a call
-            </a>
-          </li>
-        </ul>
+              <use href="./images/icon-sprite.svg#logo-header"></use>
+            </svg>
+            <svg
+              width="145"
+              height="45.94"
+              aria-label="Logo"
+              class="header__logo-svg--footer is-open"
+            >
+              <use href="./images/icon-sprite.svg#logo-footer"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__menu">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">First screen</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Services and Products</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Why work with us?</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Who we are?</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__button-container">
+          <div class="header__lang">
+            <button class="header__lang-button">
+              EN&nbsp&nbspAR
+              <div class="header__lang-container">
+                <div class="header__lang-svg header__lang-svg--en">
+                  <svg width="26" height="26" class="header__lang-svg--img">
+                    <use href="./images/icon-sprite.svg#en"></use>
+                  </svg>
+                </div>
+                <div class="header__lang-svg header__lang-svg--ar arActive">
+                  <svg width="26" height="26">
+                    <use href="./images/icon-sprite.svg#ar"></use>
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="header__menu-btn">
+            <button
+              type="button"
+              aria-expanded="false"
+              class="header__menu-button"
+            >
+              <div class="btn-container">
+                <svg
+                  width="26.06"
+                  height="26.06"
+                  aria-label="menu-switch"
+                  class="header__menu-close"
+                >
+                  <use href="./images/icon-sprite.svg#menu"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <div class="hero-container container">
+        <section class="hero">
+          <div class="hero__content">
+            <div class="hero__logo" href="#">
+              <svg
+                class="hero__logo-svg"
+                width="236"
+                height="75"
+                aria-label="Logo"
+              >
+                <use href="./images/icon-sprite.svg#logo-header"></use>
+              </svg>
+            </div>
+            <h1 class="hero__title">
+              Production and Supply Solutions
+              <span class="hero__subtitle">for Electronic Components</span>
+              <svg class="hero__subtitle-icon" width="8" height="9">
+                <use href="./images/icon-sprite.svg#hexagon-green"></use>
+              </svg>
+            </h1>
+            <p class="hero__description">
+              As one of the most reliable electronic parts suppliers in the
+              industry, we are dedicated to providing our customers with
+              top-quality electronic components, parts, and services. From
+              sourcing to delivery, we´ve got you covered.
+            </p>
+            <button class="hero__contact-btn">
+              <svg class="hero__contact-container" width="210" height="37">
+                <use href="./images/icon-sprite.svg#button-contact"></use>
+                <text
+                  class="hero__contact-text"
+                  x="40%"
+                  y="50%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                >
+                  Contact us
+                </text>
+              </svg>
+            </button>
+            <ul class="header__contact-list">
+              <li class="header__contact-item header__contact-item--geo">
+                <a href="#" class="header__contact-link">
+                  <svg width="14" height="17" class="header__contact-svg">
+                    <use href="./images/icon-sprite.svg#geo"></use>
+                  </svg>
+                  5C77+QV2 Parakar 0069
+                  <br />
+                  <span> Yerevan, Armenia </span>
+                </a>
+              </li>
+              <li class="header__contact-item header__contact-item--mail">
+                <a href="info@gmg.am" class="header__contact-link">
+                  <svg width="18" height="13.50" class="header__contact-svg">
+                    <use href="./images/icon-sprite.svg#letter"></use>
+                  </svg>
+                  <span class="header__contact-item--addition"
+                    >E-Mail:&nbsp;</span
+                  >
+                  info@gmg.am
+                </a>
+              </li>
+              <div class="header__contact-container">
+                <li class="header__contact-item">
+                  <a href="tel:+374 98 88-88-05" class="header__contact-link">
+                    <svg
+                      width="17"
+                      height="17"
+                      class="header__contact-svg header__contact-svg--phone"
+                    >
+                      <use href="./images/icon-sprite.svg#phone"></use>
+                    </svg>
+                    <span class="header__contact-item--addition"
+                      >Telefon:&nbsp;</span
+                    >
+                    +374 98 88-88-05</a
+                  >
+                </li>
+                <li class="header__contact-item">
+                  <a
+                    href="tel:+380961111111"
+                    class="header__contact-link header__contact-link--request"
+                  >
+                    Request a call
+                  </a>
+                </li>
+              </div>
+            </ul>
+            <div
+              class="hero__image"
+              style="background-image: url('/images/Hero-img.jpg')"
+            ></div>
+            <div
+              class="hero__halfhex"
+              style="background-image: url('/images/half-hex.png')"
+            ></div>
+
+            <div class="hero__arrow-container">
+              <button class="hero__arrow-btn">
+                <svg class="hero__arrow-btn--hex">
+                  <use href="./images/icon-sprite.svg#Hex"></use>
+                </svg>
+                <svg class="hero__arrow-btn--arrow">
+                  <use href="./images/icon-sprite.svg#Hex-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </header>
-    <main></main>
+    </main>
     <footer></footer>
     <script src="./index.js"></script>
   </body>

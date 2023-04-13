@@ -1,4 +1,3 @@
-// определение переменных для брейкпоинтов
 $bp-small: 360px;
 $bp-medium: 768px;
 $bp-large: 1024px;
@@ -6,64 +5,38 @@ $bp-xl: 1200px;
 $bp-xxl: 1920px;
 $bp-xxxl: 2560px;
 
-// миксин для стилей для брейкпоинта $bp-small и больших экранов
 @mixin small-screen {
   @media screen and (min-width: $bp-small) {
     @content;
   }
 }
 
-// миксин для стилей для брейкпоинта $bp-medium и больших экранов
 @mixin medium-screen {
   @media screen and (min-width: $bp-medium) {
     @content;
   }
 }
 
-// миксин для стилей для брейкпоинта $bp-large и больших экранов
 @mixin large-screen {
   @media screen and (min-width: $bp-large) {
     @content;
   }
 }
 
-// миксин для стилей для брейкпоинта $bp-xl и больших экранов
 @mixin xl-screen {
   @media screen and (min-width: $bp-xl) {
     @content;
   }
 }
 
-// миксин для стилей для брейкпоинта $bp-xxl и больших экранов
 @mixin xxl-screen {
   @media screen and (min-width: $bp-xxl) {
     @content;
   }
 }
 
-// миксин для стилей для брейкпоинта $bp-xxxl и больших экранов
 @mixin xxxl-screen {
   @media screen and (min-width: $bp-xxxl) {
     @content;
   }
 }
-// // использование миксинов
-// .my-class {
-//   color: red;
-
-//   @include small-screen {
-//     color: blue;
-//   }
-
-//   @include medium-screen {
-//     color: green;
-//   }
-
-//   @include xl-screen {
-//     font-size: 20px;
-//   }
-
-//   @include xxl-screen {
-//     font-size: 30px;
-//   }
-// }
