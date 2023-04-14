@@ -1,0 +1,187 @@
+.header-backdrop
+  transform: scale(0)
+  transition: transform 0.5s ease
+  @media (max-width: 1023px)
+    &.is-open
+      background-color: $general-second-text-color
+      position: fixed
+      z-index: 2
+      opacity: 1
+      width: 100%
+      height: 100%
+      transform: scale(1)
+
+.header
+  position: relative
+  z-index: 999
+  align-items: center
+  padding-top: 18px
+  padding-bottom: 20px
+  background-color: #fff
+  transition: background-color 0.5s ease
+
+  @media (max-width: 1023px)
+    display: flex
+    justify-content: space-between
+    &.is-open
+      background-color: inherit
+
+  @include large-screen
+    width: calc(1024px - 60px)
+    position: fixed
+    top: 0
+    z-index: 999
+    display: flex
+    justify-content: space-between
+    padding-top: 20px
+
+  @include xl-screen
+    width: calc(1200px - 60px)
+
+.header__logo-link
+  cursor: pointer
+
+.header__logo-svg
+  @media (max-width: 1023px)
+    display: block
+    width: 145px
+    height: 45.94px
+    &.is-open
+      display: none
+    @include large-screen
+      width: 236px
+      height: 75
+  @include large-screen
+    height: 50.05px
+    width: 158px
+    left: 129px
+    top: 17px
+    border-radius: 0px
+
+.header__logo-svg--footer
+  width: 145px
+  height: 45.94px
+  display: none
+
+  @media (max-width: 1023px)
+    display: block
+    &.is-open
+      display: none
+
+.header__button-container
+  display: flex
+  align-items: center
+
+.header__lang-button
+  display: block
+  border: none
+  padding: 2px 3px
+  width: 58px
+  height: 28px
+  border-radius: 55px
+  background-color: $switch-background-color
+  right: 69px
+  color: $switch-text-color
+
+  font-size: 16px
+  font-weight: 700
+  line-height: 21px
+  letter-spacing: 0em
+  @media (max-width: 1023px)
+    display: none
+    &.is-open
+      display: block
+      margin-right: 28px
+
+.header__lang-container
+  position: relative
+
+.header__lang-svg
+  position: absolute
+  top: -23px
+  left: -2px
+  border-radius: 50%
+  transition: transform 0.5s ease, opacity 0.5s ease
+  opacity: 1
+  &--img
+    width: 26px
+    height: 26px
+    border-radius: 50%
+  &.header__lang-svg--ar
+    left: 28.2px
+  &.enActive
+    opacity: 0
+    transform: translateX(116%)
+  &.arActive
+    opacity: 0
+    transform: translateX(-116%)
+
+.header__menu-btn
+  @include large-screen
+    display: none
+
+.header__menu-button
+  padding: 0
+  margin-top: 5px
+  border: none
+  background-color: $white-color
+  background-color: transparent
+
+.header__menu-close
+  width: 26px
+  height: 26px
+  transition: transform 0.1s
+  &.is-open
+    transform: rotate(45deg)
+
+.btn-container
+  overflow: hidden
+  height: 26px
+
+.header__nav-list
+  @media (max-width: 1023px)
+    display: none
+    &.is-open
+      position: absolute
+      top: 94px
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      flex-direction: column
+      width: 100%
+
+  @include large-screen
+    display: flex
+    flex-direction: row
+
+.header__nav-item
+  text-transform: uppercase
+
+  @media (max-width: 1023px)
+    margin: 0 auto 32px auto
+
+  @include large-screen
+    &:not(:last-child)
+      margin-right: 39px
+      @media (min-width: 1024px) and (max-width: 1199px)
+        margin-right: 10px
+
+.header__nav-link
+  font-size: 17px
+  font-weight: 700
+  line-height: 23px
+  letter-spacing: 0em
+  transition: color 0.25s ease
+
+  @media (max-width: 1023px)
+    color: $white-color
+
+  @include large-screen
+    color: $switch-text-color
+
+  &:hover,
+  &:focus
+    color: $hover-second-color
+
+  @media (min-width: 1024px) and (max-width: 1199px)
+    font-size: 15px

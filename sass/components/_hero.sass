@@ -1,0 +1,232 @@
+.hero
+  @media (max-width: 1023px)
+    padding-bottom: 108px
+  @include large-screen
+    margin-top: 152px
+    padding-bottom: 58px
+
+.hero-container
+  @include large-screen
+    position: relative
+
+.hero
+  position: relative
+
+.hero__content
+  @media (max-width: 1023px)
+    padding-top: 50px
+    width: 290px
+    margin: 0 auto
+  @include large-screen
+    width: 523px
+
+.hero__logo
+  margin-bottom: 26px
+  @include large-screen
+    display: none
+
+.hero__logo-svg
+  height: 75px
+  width: 236.7px
+
+.hero__title
+  margin-bottom: 18px
+  font-size: 25px
+  font-weight: 700
+  line-height: 30px
+  letter-spacing: 0em
+  text-align: justified
+  color: $general-text-color
+  @include large-screen
+    margin-bottom: 20px
+    font-size: 45px
+    line-height: 53px
+
+.hero__subtitle
+  color: $second-color
+
+.hero__subtitle-icon
+  fill: $accent-colors
+  margin-left: -4px
+  @include large-screen
+    margin-left: -5px
+
+.hero__description
+  text-align: justify
+  font-size: 16px
+  font-weight: 400
+  line-height: 22px
+  letter-spacing: 0em
+
+.hero__contact-btn
+  margin-top: 13px
+  @include large-screen
+    margin-top: 11px
+
+.header__contact-list
+  display: flex
+  flex-direction: column
+  margin-top: 34px
+  color: $second-color
+  &.is-open
+    @media (max-width: 1023px)
+      margin-top: 13px
+      position: absolute
+      z-index: 999
+      top: 330px
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      color: $white-color
+  @include large-screen
+    display: block
+    margin-top: 81px
+
+.header__contact-link
+  display: flex
+  flex-direction: row
+  font-size: 15px
+  font-weight: 400
+  line-height: 20px
+  letter-spacing: 0em
+  transition: color 0.25s ease
+
+  @media (max-width: 1023px)
+    align-items: center
+    color: inherit
+    &.is-open
+      flex-direction: column
+
+  @include large-screen
+    align-items: baseline
+    color: $second-color
+
+  &:hover, &:focus
+    color: $hover-second-color
+
+.header__contact-item--addition
+  @media (max-width: 1023px)
+    &.is-open
+      display: none
+
+.header__contact-item--geo
+  @media (max-width: 1023px)
+    display: none
+    &.is-open
+      display: block
+      width: 170px
+  @include large-screen
+    display: none
+
+.header__contact-item--mail
+  margin-bottom: 13px
+  @media (max-width: 1023px)
+    &.is-open
+      margin-bottom: 0
+
+.header__contact-container
+  @include large-screen
+    display: flex
+    margin-top: 13px
+    align-items: baseline
+
+.header__contact-link--request
+  margin-left: 30px
+  color: $active-color
+  border-color: $active-color
+  border-bottom: 1.5px dashed $active-color
+  width: max-content
+  font-size: 14px
+  font-weight: 700
+  line-height: 19px
+  letter-spacing: 0em
+  text-align: left
+  @media (max-width: 1023px)
+    &.is-open
+      margin: 0 auto
+      margin-top: 5px
+
+  @include large-screen
+    margin-left: 7px
+    transition: all 0.3s ease-in-out
+
+.header__contact-link--request:hover, .header__contact-link--request:focus
+  color: $accent-colors
+  border-bottom-color: $accent-colors
+
+.header__contact-svg
+  width: 14px
+  height: 17px
+  margin-right: 11px
+  &--mail
+    width: 18px
+    height: 13.5px
+  &--phone
+    width: 17px
+    height: 17px
+  @media (max-width: 1023px)
+    &.is-open
+      margin-bottom: 7px
+      margin-top: 28px
+
+.header__contact-svg--phone
+  opacity: 0.5
+
+.hero__image
+  @include large-screen
+    position: absolute
+    background-size: cover
+    height: 428px
+    width: 428px
+    top: 0
+  @media (max-width: 1199px)
+    right: 0px
+  @include xl-screen
+    right: 30px
+
+.hero__arrow-container
+  position: absolute
+  left: 50%
+  top: 605px
+  transform: translate(-50%, 0)
+  @include large-screen
+    position: absolute
+    top: 421px
+
+.hero__arrow-btn
+  position: relative
+  border: none
+  background-color: transparent
+  cursor: pointer
+  &:hover .hero__arrow-btn--hex,
+  &:focus .hero__arrow-btn--hex
+    stroke: $stroke-color
+
+.hero__arrow-btn--hex
+  width: 45.66px
+  height: 52.75px
+  stroke: #c1c1c1
+  transition: stroke 1s ease
+  @include large-screen
+    width: 63.53px
+    height: 73.65px
+
+.hero__arrow-btn--arrow
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 15.88px
+  height: 8.99px
+
+  pointer-events: auto
+  fill: #c1c1c1
+  transition: transform 0.5s ease, color 0.5s ease
+  @include large-screen
+    width: 22.09px
+    height: 12.55px
+
+.hero__arrow-btn:hover .hero__arrow-btn--arrow,
+.hero__arrow-btn:focus .hero__arrow-btn--arrow
+  fill: $second-color
+  transform: translate(-50%, 0)
