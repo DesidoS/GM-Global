@@ -26,11 +26,27 @@
       href="./icon/favicon-16x16.png"
     />
     <style>
-      @media (max-width: 1024px) {
+      @media (max-width: 1023px) {
         .hero-container {
           background-image: url("./images/hero-bg-mobile.jpg");
           background-size: cover;
           height: 680px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .services-container {
+          background-image: url("images/services-mobile-bg.jpg");
+          background-size: cover;
+          height: 1828px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .services-container {
+          background-image: url("images/services-desktop-bg.jpg");
+          background-size: cover;
+          /* width: 1366px; */
+          width: 100%;
+          height: 1275px;
         }
       }
     </style>
@@ -42,20 +58,10 @@
       <header class="header">
         <div class="header__logo">
           <a href="#" class="header__logo-link">
-            <svg
-              width="145"
-              height="45.94"
-              aria-label="Logo"
-              class="header__logo-svg"
-            >
+            <svg aria-label="Logo" class="header__logo-svg">
               <use href="./images/icon-sprite.svg#logo-header"></use>
             </svg>
-            <svg
-              width="145"
-              height="45.94"
-              aria-label="Logo"
-              class="header__logo-svg--footer is-open"
-            >
+            <svg aria-label="Logo" class="header__logo-svg--footer is-open">
               <use href="./images/icon-sprite.svg#logo-footer"></use>
             </svg>
           </a>
@@ -87,12 +93,12 @@
               EN&nbsp&nbspAR
               <div class="header__lang-container">
                 <div class="header__lang-svg header__lang-svg--en">
-                  <svg width="26" height="26" class="header__lang-svg--img">
+                  <svg class="header__lang-svg--img">
                     <use href="./images/icon-sprite.svg#en"></use>
                   </svg>
                 </div>
                 <div class="header__lang-svg header__lang-svg--ar arActive">
-                  <svg width="26" height="26">
+                  <svg class="header__lang-svg--img">
                     <use href="./images/icon-sprite.svg#ar"></use>
                   </svg>
                 </div>
@@ -106,12 +112,7 @@
               class="header__menu-button"
             >
               <div class="btn-container">
-                <svg
-                  width="26.06"
-                  height="26.06"
-                  aria-label="menu-switch"
-                  class="header__menu-close"
-                >
+                <svg aria-label="menu-switch" class="header__menu-close">
                   <use href="./images/icon-sprite.svg#menu"></use>
                 </svg>
               </div>
@@ -125,19 +126,14 @@
         <section class="hero">
           <div class="hero__content">
             <div class="hero__logo" href="#">
-              <svg
-                class="hero__logo-svg"
-                width="236"
-                height="75"
-                aria-label="Logo"
-              >
+              <svg class="hero__logo-svg" aria-label="Logo">
                 <use href="./images/icon-sprite.svg#logo-header"></use>
               </svg>
             </div>
             <h1 class="hero__title">
               Production and Supply Solutions
               <span class="hero__subtitle">for Electronic Components</span>
-              <svg class="hero__subtitle-icon" width="8" height="9">
+              <svg class="dot hero__subtitle-icon">
                 <use href="./images/icon-sprite.svg#hexagon-green"></use>
               </svg>
             </h1>
@@ -147,8 +143,8 @@
               top-quality electronic components, parts, and services. From
               sourcing to delivery, we´ve got you covered.
             </p>
-            <button class="hero__contact-btn">
-              <svg class="hero__contact-container" width="210" height="37">
+            <button class="button hero__contact-btn">
+              <svg class="button-svg hero__contact-container">
                 <use href="./images/icon-sprite.svg#button-contact"></use>
                 <text
                   class="hero__contact-text"
@@ -164,7 +160,7 @@
             <ul class="header__contact-list">
               <li class="header__contact-item header__contact-item--geo">
                 <a href="#" class="header__contact-link">
-                  <svg width="14" height="17" class="header__contact-svg">
+                  <svg class="header__contact-svg">
                     <use href="./images/icon-sprite.svg#geo"></use>
                   </svg>
                   5C77+QV2 Parakar 0069
@@ -174,7 +170,7 @@
               </li>
               <li class="header__contact-item header__contact-item--mail">
                 <a href="info@gmg.am" class="header__contact-link">
-                  <svg width="18" height="13.50" class="header__contact-svg">
+                  <svg class="header__contact-svg header__contact-svg--mail">
                     <use href="./images/icon-sprite.svg#letter"></use>
                   </svg>
                   <span class="header__contact-item--addition"
@@ -186,11 +182,7 @@
               <div class="header__contact-container">
                 <li class="header__contact-item">
                   <a href="tel:+374 98 88-88-05" class="header__contact-link">
-                    <svg
-                      width="17"
-                      height="17"
-                      class="header__contact-svg header__contact-svg--phone"
-                    >
+                    <svg class="header__contact-svg header__contact-svg--phone">
                       <use href="./images/icon-sprite.svg#phone"></use>
                     </svg>
                     <span class="header__contact-item--addition"
@@ -230,6 +222,37 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="services-container">
+        <div class="container">
+          <section class="services">
+            <ul>
+              <li style="background-image: url('./images/services_1.jpg')"></li>
+              <li style="background-image: url('./images/services_2.jpg')"></li>
+              <li style="background-image: url('./images/services_3.jpg')"></li>
+              <li style="background-image: url('./images/services_4.jpg')"></li>
+            </ul>
+            <h2>
+              Services &
+              <span>Products</span>
+              <svg class="dot" fill="#fff">
+                <use href="./images/icon-sprite.svg#hexagon-green"></use>
+              </svg>
+            </h2>
+            <p>
+              We maintain a vast warehouse of electronic parts and components,
+              continuously expanding to meet your evolving needs. To achieve
+              this, we acquire excess stock and obsolete components that are not
+              readily available elsewhere. Furthermore, we are pleased to
+              facilitate the special procurement of components that are not
+              accessible through traditional delivery channels.
+            </p>
+            <p>
+              GM Global is offering a wide range of electronic components, each
+              designed to deliver optimal performance and reliability.
+            </p>
+          </section>
+        </div>
       </div>
     </main>
     <footer></footer>

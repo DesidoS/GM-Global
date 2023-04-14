@@ -66,7 +66,7 @@ body {
 }
 @media (max-width: 1023px) {
   .header-backdrop.is-open {
-    background-color: #0c0c0c;
+    background-color: #000000;
     position: fixed;
     z-index: 2;
     opacity: 1;
@@ -130,9 +130,17 @@ body {
 @media (max-width: 1023px) {
   .header__logo-svg {
     display: block;
+    width: 145px;
+    height: 45.94px;
   }
   .header__logo-svg.is-open {
     display: none;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 1024px) {
+  .header__logo-svg {
+    width: 236px;
+    height: 75;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -146,6 +154,8 @@ body {
 }
 
 .header__logo-svg--footer {
+  width: 145px;
+  height: 45.94px;
   display: none;
 }
 @media (max-width: 1023px) {
@@ -207,6 +217,8 @@ body {
   opacity: 1;
 }
 .header__lang-svg--img {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
 }
 .header__lang-svg.header__lang-svg--ar {
@@ -233,11 +245,13 @@ body {
   padding: 0;
   margin-top: 5px;
   border: none;
-  background-color: #fff;
+  background-color: #ffffff;
   background-color: transparent;
 }
 
 .header__menu-close {
+  width: 26px;
+  height: 26px;
   -webkit-transition: -webkit-transform 0.1s;
   transition: -webkit-transform 0.1s;
   transition: transform 0.1s;
@@ -314,7 +328,7 @@ body {
 }
 @media (max-width: 1023px) {
   .header__nav-link {
-    color: #fff;
+    color: #ffffff;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -331,9 +345,15 @@ body {
   }
 }
 
+@media (max-width: 1023px) {
+  .hero {
+    padding-bottom: 108px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .hero {
     margin-top: 152px;
+    padding-bottom: 58px;
   }
 }
 
@@ -341,6 +361,10 @@ body {
   .hero-container {
     position: relative;
   }
+}
+
+.hero {
+  position: relative;
 }
 
 @media (max-width: 1023px) {
@@ -365,6 +389,11 @@ body {
   }
 }
 
+.hero__logo-svg {
+  height: 75px;
+  width: 236.7px;
+}
+
 .hero__title {
   margin-bottom: 18px;
   font-size: 25px;
@@ -387,15 +416,12 @@ body {
 }
 
 .hero__subtitle-icon {
+  fill: #48b57f;
   margin-left: -4px;
-  width: 4px;
-  height: 5px;
 }
 @media screen and (min-width: 1024px) {
   .hero__subtitle-icon {
     margin-left: -5px;
-    width: 8px;
-    height: 9px;
   }
 }
 
@@ -408,117 +434,12 @@ body {
 }
 
 .hero__contact-btn {
-  display: inline-block;
-  width: 210px;
-  height: 37px;
   margin-top: 13px;
-  padding: 0;
-  background-size: cover;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #ffffff;
-  fill: #48b57f;
-  -webkit-animation: change-color 5s infinite;
-          animation: change-color 5s infinite;
-  -webkit-transition: fill 0.5s ease;
-  transition: fill 0.5s ease;
 }
 @media screen and (min-width: 1024px) {
   .hero__contact-btn {
     margin-top: 11px;
   }
-}
-
-@-webkit-keyframes change-color {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #48b57f;
-  }
-  50% {
-    fill: #76d0a4;
-  }
-  75% {
-    fill: #48b57f;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-
-@keyframes change-color {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #48b57f;
-  }
-  50% {
-    fill: #76d0a4;
-  }
-  75% {
-    fill: #48b57f;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-.hero__contact-btn:hover,
-.hero__contact-btn:focus {
-  -webkit-animation-name: button-animation;
-          animation-name: button-animation;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes button-animation {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #ff905b;
-  }
-  50% {
-    fill: #f47133;
-  }
-  75% {
-    fill: #ff905b;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-
-@keyframes button-animation {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #ff905b;
-  }
-  50% {
-    fill: #f47133;
-  }
-  75% {
-    fill: #ff905b;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-.hero__contact-text {
-  fill: #fff;
 }
 
 .header__contact-list {
@@ -537,7 +458,7 @@ body {
     margin-top: 13px;
     position: absolute;
     z-index: 999;
-    top: 380px;
+    top: 330px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -637,9 +558,9 @@ body {
 
 .header__contact-link--request {
   margin-left: 30px;
-  color: #f47133;
-  border-color: #f47133;
-  border-bottom: 1.5px dashed #f47133;
+  color: #ff905b;
+  border-color: #ff905b;
+  border-bottom: 1.5px dashed #ff905b;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -670,7 +591,17 @@ body {
 }
 
 .header__contact-svg {
+  width: 14px;
+  height: 17px;
   margin-right: 11px;
+}
+.header__contact-svg--mail {
+  width: 18px;
+  height: 13.5px;
+}
+.header__contact-svg--phone {
+  width: 17px;
+  height: 17px;
 }
 @media (max-width: 1023px) {
   .header__contact-svg.is-open {
@@ -690,6 +621,15 @@ body {
     height: 428px;
     width: 428px;
     top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .hero__image {
+    right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__image {
     right: 30px;
   }
 }
@@ -697,7 +637,7 @@ body {
 .hero__arrow-container {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  top: 605px;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -761,4 +701,126 @@ body {
   fill: #6c7073;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.button {
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  fill: #48b57f;
+  -webkit-animation: change-color 5s infinite;
+          animation: change-color 5s infinite;
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+
+@-webkit-keyframes change-color {
+  0% {
+    fill: #48b57f;
+  }
+  25% {
+    fill: #48b57f;
+  }
+  50% {
+    fill: #76d0a4;
+  }
+  75% {
+    fill: #48b57f;
+  }
+  100% {
+    fill: #48b57f;
+  }
+}
+
+@keyframes change-color {
+  0% {
+    fill: #48b57f;
+  }
+  25% {
+    fill: #48b57f;
+  }
+  50% {
+    fill: #76d0a4;
+  }
+  75% {
+    fill: #48b57f;
+  }
+  100% {
+    fill: #48b57f;
+  }
+}
+.button:hover,
+.button:focus {
+  -webkit-animation-name: button-animation;
+          animation-name: button-animation;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes button-animation {
+  0% {
+    fill: #48b57f;
+  }
+  25% {
+    fill: #ff905b;
+  }
+  50% {
+    fill: #f47133;
+  }
+  75% {
+    fill: #ff905b;
+  }
+  100% {
+    fill: #48b57f;
+  }
+}
+
+@keyframes button-animation {
+  0% {
+    fill: #48b57f;
+  }
+  25% {
+    fill: #ff905b;
+  }
+  50% {
+    fill: #f47133;
+  }
+  75% {
+    fill: #ff905b;
+  }
+  100% {
+    fill: #48b57f;
+  }
+}
+.hero__contact-text {
+  fill: #ffffff;
+}
+
+.button-svg {
+  width: 210px;
+  height: 37px;
+}
+
+.dot {
+  width: 4px;
+  height: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .dot {
+    width: 8px;
+    height: 9px;
+  }
 }/*# sourceMappingURL=main.css.map */

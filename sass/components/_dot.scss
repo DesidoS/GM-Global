@@ -1,0 +1,8 @@
+.dot {
+  width: 4px;
+  height: 5px;
+  @include large-screen {
+    width: 8px;
+    height: 9px;
+  }
+}

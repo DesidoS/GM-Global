@@ -1,12 +1,19 @@
 .hero {
+  @media (max-width: 1023px) {
+    padding-bottom: 108px;
+  }
   @include large-screen {
     margin-top: 152px;
+    padding-bottom: 58px;
   }
 }
 .hero-container {
   @include large-screen {
     position: relative;
   }
+}
+.hero {
+  position: relative;
 }
 
 .hero__content {
@@ -25,6 +32,10 @@
     display: none;
   }
 }
+.hero__logo-svg {
+  height: 75px;
+  width: 236.7px;
+}
 
 .hero__title {
   margin-bottom: 18px;
@@ -34,7 +45,7 @@
   line-height: 30px;
   letter-spacing: 0em;
   text-align: justified;
-  color: #000000;
+  color: $general-text-color;
   @include large-screen {
     margin-bottom: 20px;
 
@@ -44,17 +55,14 @@
 }
 
 .hero__subtitle {
-  color: #6c7073;
+  color: $second-color;
 }
 
 .hero__subtitle-icon {
+  fill: $accent-colors;
   margin-left: -4px;
-  width: 4px;
-  height: 5px;
   @include large-screen {
     margin-left: -5px;
-    width: 8px;
-    height: 9px;
   }
 }
 
@@ -65,100 +73,31 @@
   line-height: 22px;
   letter-spacing: 0em;
 }
-
 .hero__contact-btn {
-  display: inline-block;
-  width: 210px;
-  height: 37px;
   margin-top: 13px;
-  padding: 0;
-  background-size: cover;
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #ffffff;
-  fill: #48b57f;
   @include large-screen {
     margin-top: 11px;
   }
-  animation: change-color 5s infinite;
-
-  transition: fill 0.5s ease;
-}
-
-@keyframes change-color {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #48b57f;
-  }
-  50% {
-    fill: #76d0a4;
-  }
-  75% {
-    fill: #48b57f;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-
-.hero__contact-btn:hover,
-.hero__contact-btn:focus {
-  animation-name: button-animation;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes button-animation {
-  0% {
-    fill: #48b57f;
-  }
-  25% {
-    fill: #ff905b;
-  }
-  50% {
-    fill: #f47133;
-  }
-  75% {
-    fill: #ff905b;
-  }
-  100% {
-    fill: #48b57f;
-  }
-}
-
-.hero__contact-text {
-  fill: #fff;
 }
 
 .header__contact-list {
   display: flex;
   flex-direction: column;
   margin-top: 34px;
-  //   margin-bottom: 13px;
 
-  color: #6c7073;
+  color: $second-color;
   &.is-open {
     @media (max-width: 1023px) {
       margin-top: 13px;
 
       position: absolute;
       z-index: 999;
-      top: 380px;
+      top: 330px;
       left: 50%;
       transform: translateX(-50%);
       display: block;
 
-      color: #ffffff;
+      color: $white-color;
     }
   }
 
@@ -188,11 +127,11 @@
 
   @include large-screen {
     align-items: baseline;
-    color: #6c7073;
+    color: $second-color;
   }
   &:hover,
   &:focus {
-    color: #c0c0c0;
+    color: $hover-second-color;
   }
 }
 
@@ -236,9 +175,9 @@
 
 .header__contact-link--request {
   margin-left: 30px;
-  color: #f47133;
-  border-color: #f47133;
-  border-bottom: 1.5px dashed #f47133;
+  color: $active-color;
+  border-color: $active-color;
+  border-bottom: 1.5px dashed $active-color;
   width: max-content;
   font-size: 14px;
   font-weight: 700;
@@ -260,19 +199,28 @@
 
 .header__contact-link--request:hover,
 .header__contact-link--request:focus {
-  color: #48b57f;
-  border-bottom-color: #48b57f;
+  color: $accent-colors;
+  border-bottom-color: $accent-colors;
 }
 
 .header__contact-svg {
+  width: 14px;
+  height: 17px;
+  margin-right: 11px;
+  &--mail {
+    width: 18px;
+    height: 13.5px;
+  }
+  &--phone {
+    width: 17px;
+    height: 17px;
+  }
   @media (max-width: 1023px) {
     &.is-open {
       margin-bottom: 7px;
-
       margin-top: 28px;
     }
   }
-  margin-right: 11px;
 }
 
 .header__contact-svg--phone {
@@ -286,6 +234,12 @@
     height: 428px;
     width: 428px;
     top: 0;
+  }
+  @media (max-width: 1199px) {
+    right: 0px;
+  }
+
+  @include xl-screen {
     right: 30px;
   }
 }
@@ -293,7 +247,7 @@
 .hero__arrow-container {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  top: 605px;
   transform: translate(-50%, 0);
   @include large-screen {
     position: absolute;
@@ -309,7 +263,7 @@
 }
 .hero__arrow-btn:hover .hero__arrow-btn--hex,
 .hero__arrow-btn:focus .hero__arrow-btn--hex {
-  stroke: #b2ffd9;
+  stroke: $stroke-color;
 }
 
 .hero__arrow-btn--hex {
@@ -341,6 +295,6 @@
 
 .hero__arrow-btn:hover .hero__arrow-btn--arrow,
 .hero__arrow-btn:focus .hero__arrow-btn--arrow {
-  fill: #6c7073;
+  fill: $second-color;
   transform: translate(-50%, 0);
 }
