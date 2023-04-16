@@ -8,10 +8,6 @@
       content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=4.0"
     />
     <title>GM Global</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,8 +40,6 @@
         .services-container {
           background-image: url("images/services-desktop-bg.jpg");
           background-size: cover;
-          /* width: 1366px; */
-          width: 100%;
           height: 1275px;
         }
       }
@@ -53,9 +47,8 @@
   </head>
 
   <body>
-    <div class="header-backdrop"></div>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="header__content container">
         <div class="header__logo">
           <a href="#" class="header__logo-link">
             <svg aria-label="Logo" class="header__logo-svg">
@@ -86,6 +79,44 @@
               </li>
             </ul>
           </nav>
+        </div>
+        <div class="header__contact">
+          <ul class="header__contact-list">
+            <li class="header__contact-item header__contact-item--geo">
+              <a href="#" class="header__contact-link">
+                <svg class="header__contact-svg">
+                  <use href="./images/icon-sprite.svg#geo"></use>
+                </svg>
+                5C77+QV2 Parakar 0069
+                <br />
+                <span> Yerevan, Armenia </span>
+              </a>
+            </li>
+            <li class="header__contact-item header__contact-item--mail">
+              <a href="info@gmg.am" class="header__contact-link">
+                <svg class="header__contact-svg header__contact-svg--mail">
+                  <use href="./images/icon-sprite.svg#letter"></use>
+                </svg>
+                info@gmg.am
+              </a>
+            </li>
+            <li class="header__contact-item">
+              <a href="tel:+374 98 88-88-05" class="header__contact-link">
+                <svg class="header__contact-svg header__contact-svg--phone">
+                  <use href="./images/icon-sprite.svg#phone"></use>
+                </svg>
+                +374 98 88-88-05</a
+              >
+            </li>
+            <li class="header__contact-item header__contact-item--request">
+              <a
+                href="tel:+380961111111"
+                class="header__contact-link header__contact-link--request"
+              >
+                Request a call
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="header__button-container">
           <div class="header__lang">
@@ -119,109 +150,111 @@
             </button>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
     <main>
-      <div class="hero-container container">
-        <section class="hero">
-          <div class="hero__content">
-            <div class="hero__logo" href="#">
-              <svg class="hero__logo-svg" aria-label="Logo">
-                <use href="./images/icon-sprite.svg#logo-header"></use>
-              </svg>
-            </div>
-            <h1 class="hero__title">
-              Production and Supply Solutions
-              <span class="hero__subtitle">for Electronic Components</span>
-              <svg class="dot hero__subtitle-icon">
-                <use href="./images/icon-sprite.svg#hexagon-green"></use>
-              </svg>
-            </h1>
-            <p class="hero__description">
-              As one of the most reliable electronic parts suppliers in the
-              industry, we are dedicated to providing our customers with
-              top-quality electronic components, parts, and services. From
-              sourcing to delivery, we´ve got you covered.
-            </p>
-            <button class="button hero__contact-btn">
-              <svg class="button-svg hero__contact-container">
-                <use href="./images/icon-sprite.svg#button-contact"></use>
-                <text
-                  class="hero__contact-text"
-                  x="40%"
-                  y="50%"
-                  dominant-baseline="middle"
-                  text-anchor="middle"
-                >
-                  Contact us
-                </text>
-              </svg>
-            </button>
-            <ul class="header__contact-list">
-              <li class="header__contact-item header__contact-item--geo">
-                <a href="#" class="header__contact-link">
-                  <svg class="header__contact-svg">
-                    <use href="./images/icon-sprite.svg#geo"></use>
-                  </svg>
-                  5C77+QV2 Parakar 0069
-                  <br />
-                  <span> Yerevan, Armenia </span>
-                </a>
-              </li>
-              <li class="header__contact-item header__contact-item--mail">
-                <a href="info@gmg.am" class="header__contact-link">
-                  <svg class="header__contact-svg header__contact-svg--mail">
-                    <use href="./images/icon-sprite.svg#letter"></use>
-                  </svg>
-                  <span class="header__contact-item--addition"
-                    >E-Mail:&nbsp;</span
+      <div class="hero-container">
+        <div class="container">
+          <section class="hero">
+            <div class="hero__content">
+              <div class="hero__logo" href="#">
+                <svg class="hero__logo-svg" aria-label="Logo">
+                  <use href="./images/icon-sprite.svg#logo-header"></use>
+                </svg>
+              </div>
+              <h1 class="hero__title">
+                Production and Supply Solutions
+                <span class="hero__subtitle">for Electronic Components</span>
+                <svg class="dot hero__subtitle-icon">
+                  <use href="./images/icon-sprite.svg#hexagon-green"></use>
+                </svg>
+              </h1>
+              <p class="hero__description">
+                As one of the most reliable electronic parts suppliers in the
+                industry, we are dedicated to providing our customers with
+                top-quality electronic components, parts, and services. From
+                sourcing to delivery, we´ve got you covered.
+              </p>
+              <button class="button hero__contact-btn">
+                <svg class="button-svg hero__contact-container">
+                  <use href="./images/icon-sprite.svg#button-contact"></use>
+                  <text
+                    class="hero__contact-text"
+                    x="40%"
+                    y="50%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
                   >
-                  info@gmg.am
-                </a>
-              </li>
-              <div class="header__contact-container">
-                <li class="header__contact-item">
-                  <a href="tel:+374 98 88-88-05" class="header__contact-link">
-                    <svg class="header__contact-svg header__contact-svg--phone">
-                      <use href="./images/icon-sprite.svg#phone"></use>
+                    Contact us
+                  </text>
+                </svg>
+              </button>
+              <ul class="hero__contact-list">
+                <!-- <li class="hero__contact-item hero__contact-item--geo">
+                  <a href="#" class="hero__contact-link">
+                    <svg class="hero__contact-svg">
+                      <use href="./images/icon-sprite.svg#geo"></use>
                     </svg>
-                    <span class="header__contact-item--addition"
-                      >Telefon:&nbsp;</span
+                    5C77+QV2 Parakar 0069
+                    <br />
+                    <span> Yerevan, Armenia </span>
+                  </a>
+                </li> -->
+                <li class="hero__contact-item hero__contact-item--mail">
+                  <a href="info@gmg.am" class="hero__contact-link">
+                    <svg class="hero__contact-svg hero__contact-svg--mail">
+                      <use href="./images/icon-sprite.svg#letter"></use>
+                    </svg>
+                    <span class="hero__contact-item--addition"
+                      >E-Mail:&nbsp;</span
                     >
-                    +374 98 88-88-05</a
-                  >
-                </li>
-                <li class="header__contact-item">
-                  <a
-                    href="tel:+380961111111"
-                    class="header__contact-link header__contact-link--request"
-                  >
-                    Request a call
+                    info@gmg.am
                   </a>
                 </li>
-              </div>
-            </ul>
-          </div>
-          <div
-            class="hero__image"
-            style="background-image: url('./images/Hero-img.jpg')"
-          ></div>
-          <div
-            class="hero__halfhex"
-            style="background-image: url('./images/half-hex.png')"
-          ></div>
+                <div class="hero__contact-container">
+                  <li class="hero__contact-item">
+                    <a href="tel:+374 98 88-88-05" class="hero__contact-link">
+                      <svg class="hero__contact-svg hero__contact-svg--phone">
+                        <use href="./images/icon-sprite.svg#phone"></use>
+                      </svg>
+                      <span class="hero__contact-item--addition"
+                        >Telefon:&nbsp;</span
+                      >
+                      +374 98 88-88-05</a
+                    >
+                  </li>
+                  <li class="hero__contact-item">
+                    <a
+                      href="tel:+380961111111"
+                      class="hero__contact-link hero__contact-link--request"
+                    >
+                      Request a call
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div
+              class="hero__image"
+              style="background-image: url('./images/Hero-img.jpg')"
+            ></div>
+            <div
+              class="hero__halfhex"
+              style="background-image: url('./images/half-hex.png')"
+            ></div>
 
-          <div class="hero__arrow-container">
-            <button class="hero__arrow-btn">
-              <svg class="hero__arrow-btn--hex">
-                <use href="./images/icon-sprite.svg#Hex"></use>
-              </svg>
-              <svg class="hero__arrow-btn--arrow">
-                <use href="./images/icon-sprite.svg#Hex-arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </section>
+            <div class="hero__arrow-container">
+              <button class="hero__arrow-btn">
+                <svg class="hero__arrow-btn--hex">
+                  <use href="./images/icon-sprite.svg#Hex"></use>
+                </svg>
+                <svg class="hero__arrow-btn--arrow">
+                  <use href="./images/icon-sprite.svg#Hex-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
       </div>
       <div class="services-container">
         <div class="container">
@@ -256,6 +289,6 @@
       </div>
     </main>
     <footer></footer>
-    <script src="./index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

@@ -1,42 +1,36 @@
-.header-backdrop
-  transform: scale(0)
-  transition: transform 0.5s ease
-  @media (max-width: 1023px)
-    &.is-open
-      background-color: $general-second-text-color
-      position: fixed
-      z-index: 2
-      opacity: 1
-      width: 100%
-      height: 100%
-      transform: scale(1)
-
 .header
-  position: relative
+  position: fixed
   z-index: 999
+  top: 0
   align-items: center
+  display: flex
+  justify-content: space-between
+  width: 100%
   padding-top: 18px
   padding-bottom: 20px
   background-color: #fff
   transition: background-color 0.5s ease
 
   @media (max-width: 1023px)
-    display: flex
-    justify-content: space-between
+    transition: background-color 0.5s ease-in-out
     &.is-open
+      display: block
       background-color: inherit
+      background-color: $general-second-text-color
+      height: 100vh
+      overflow: hidden
+    &.beckdrop-scroll
+      overflow-y: scroll
 
   @include large-screen
-    width: calc(1024px - 60px)
-    position: fixed
-    top: 0
-    z-index: 999
-    display: flex
-    justify-content: space-between
     padding-top: 20px
 
-  @include xl-screen
-    width: calc(1200px - 60px)
+.header__content
+  position: relative
+  display: flex
+  margin: 0 auto
+  justify-content: space-between
+  align-items: center
 
 .header__logo-link
   cursor: pointer
@@ -54,8 +48,6 @@
   @include large-screen
     height: 50.05px
     width: 158px
-    // left: 129px
-    // top: 17px
     border-radius: 0px
 
 .header__logo-svg--footer
@@ -80,7 +72,6 @@
   height: 28px
   border-radius: 55px
   background-color: $switch-background-color
-  // right: 69px
   color: $switch-text-color
 
   font-size: 16px
@@ -93,12 +84,9 @@
       display: block
       margin-right: 28px
 
-.header__lang-container
-  position: relative
-
 .header__lang-svg
   position: absolute
-  top: -23px
+  top: -23.5px
   left: -2px
   border-radius: 50%
   transition: transform 0.5s ease, opacity 0.5s ease
@@ -117,7 +105,86 @@
     transform: translateX(-116%)
 
 .header__menu
-  position: relative
+  @media (max-width: 1023px)
+    display: none
+    &.is-open
+      position: absolute
+      top: 94px
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      flex-direction: column
+      width: 100%
+
+.header__contact
+  display: none
+  @media (max-width: 1023px)
+    &.is-open
+      position: absolute
+      width: 100%
+      top: 380px
+      left: 50%
+      display: flex
+      padding-bottom: 26px
+      transform: translateX(-50%)
+      flex-direction: column
+
+.header__contact-link
+  display: flex
+  align-items: center
+  flex-direction: column
+
+  color: $white-color
+  font-size: 15px
+  font-weight: 400
+  line-height: 20px
+  letter-spacing: 0em
+  transition: color 0.25s ease
+
+  &:hover, &:focus
+    color: $hover-second-color
+
+.header__contact-item:nth-of-type(-n+2)
+  margin-bottom: 28.3px
+
+.header__contact-item--request
+  margin-top: 5px
+
+.header__contact-item--addition
+  display: none
+
+.header__contact-link--request
+  width: max-content
+  margin-top: 5px
+  color: $active-color
+  border-color: $active-color
+  border-bottom: 1.5px dashed $active-color
+  font-size: 14px
+  font-weight: 700
+  line-height: 19px
+  letter-spacing: 0em
+  text-align: left
+  margin: 0 auto
+  transition: all 0.3s ease-in-out
+
+.header__contact-link--request:hover,
+.header__contact-link--request:focus
+  color: $accent-colors
+  border-bottom-color: $accent-colors
+
+.header__contact-svg
+  width: 14px
+  height: 17px
+  margin-bottom: 8px
+  &--mail
+    width: 18px
+    height: 13.5px
+    &--phone
+      width: 17px
+      height: 17px
+
+.header__contact-svg--phone
+  opacity: 0.5
 
 .header__menu-btn
   @include large-screen
@@ -142,19 +209,12 @@
   height: 26px
 
 .header__nav-list
+  display: flex
   @media (max-width: 1023px)
-    display: none
-    &.is-open
-      position: absolute
-      top: 94px
-      left: 50%
-      transform: translateX(-50%)
-      display: flex
-      flex-direction: column
-      width: 300px
+    flex-direction: column
 
   @include large-screen
-    display: flex
+
     flex-direction: row
 
 .header__nav-item
