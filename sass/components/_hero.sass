@@ -1,28 +1,27 @@
 .hero
-  @media (max-width: 1023px)
-    padding-bottom: 108px
-  @include large-screen
+  padding-bottom: 108px
+  @media (min-width: 1025px)
     margin-top: 152px
     padding-bottom: 58px
 
 .hero-container
-  @include large-screen
+  @media (min-width: 1025px)
     position: relative
 
 .hero
   position: relative
 
 .hero__content
-  @media (max-width: 1023px)
-    padding-top: 50px
-    width: 290px
-    margin: 0 auto
-  @include large-screen
+  padding-top: 50px
+  margin: 0 auto
+  @media (min-width: 1025px)
+    padding-top: 0
+    margin: 0
     width: 523px
 
 .hero__logo
   margin-bottom: 26px
-  @include large-screen
+  @media (min-width: 1025px)
     display: none
 
 .hero__logo-svg
@@ -37,7 +36,7 @@
   letter-spacing: 0em
   text-align: justified
   color: $general-text-color
-  @include large-screen
+  @media (min-width: 1025px)
     margin-bottom: 20px
     font-size: 45px
     line-height: 53px
@@ -47,20 +46,20 @@
 
 .hero__subtitle-icon
   fill: $accent-colors
-  margin-left: -4px
-  @include large-screen
-    margin-left: -5px
 
 .hero__description
+  color: $second-color
   text-align: justify
   font-size: 16px
-  font-weight: 400
+  font-weight: 700
   line-height: 22px
   letter-spacing: 0em
+  @media (min-width: 1025px)
+    font-weight: 400
 
 .hero__contact-btn
   margin-top: 13px
-  @include large-screen
+  @media (min-width: 1025px)
     margin-top: 11px
 
 .hero__contact-list
@@ -68,41 +67,35 @@
   flex-direction: column
   margin-top: 34px
   color: $second-color
-  @include large-screen
+  @media (min-width: 1025px)
     margin-top: 81px
 
 .hero__contact-link
   display: flex
   flex-direction: row
+  align-items: center
+
   font-size: 15px
   font-weight: 400
   line-height: 20px
   letter-spacing: 0em
   transition: color 0.25s ease
+  color: inherit
 
-  @media (max-width: 1023px)
-    align-items: center
-    color: inherit
+  @media (min-width: 1025px)
+    align-items: baseline
+    color: $second-color
 
-    @include large-screen
-      align-items: baseline
-      color: $second-color
-
-    &:hover, &:focus
-      color: $hover-second-color
-
-.hero__contact-item--geo
-  @media (max-width: 1023px)
-    display: none
-    @include large-screen
-    display: none
+  &:hover, &:focus
+    color: $hover-second-color
 
 .hero__contact-item--mail
   margin-bottom: 13px
-  @media (max-width: 1023px)
+  @media (min-width: 1025px)
+    margin: 0
 
 .hero__contact-container
-  @include large-screen
+  @media (min-width: 1025px)
     display: flex
     margin-top: 13px
     align-items: baseline
@@ -119,7 +112,7 @@
   letter-spacing: 0em
   text-align: left
 
-  @include large-screen
+  @media (min-width: 1025px)
     margin-left: 7px
     transition: all 0.3s ease-in-out
 
@@ -143,15 +136,14 @@
   opacity: 0.5
 
 .hero__image
-  @include large-screen
+  right: 0px
+  @media (min-width: 1025px)
     position: absolute
     background-size: cover
     height: 428px
     width: 428px
     top: 0
-  @media (max-width: 1199px)
-    right: 0px
-  @include xl-screen
+  @media (min-width: 1200px)
     right: -30px
 
 .hero__arrow-container
@@ -159,7 +151,7 @@
   left: 50%
   top: 605px
   transform: translate(-50%, 0)
-  @include large-screen
+  @media (min-width: 1025px)
     position: absolute
     top: 421px
 
@@ -177,7 +169,7 @@
   height: 52.75px
   stroke: #c1c1c1
   transition: stroke 1s ease
-  @include large-screen
+  @media (min-width: 1025px)
     width: 63.53px
     height: 73.65px
 
@@ -192,7 +184,7 @@
   pointer-events: auto
   fill: #c1c1c1
   transition: transform 0.5s ease, color 0.5s ease
-  @include large-screen
+  @media (min-width: 1025px)
     width: 22.09px
     height: 12.55px
 

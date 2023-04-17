@@ -190,16 +190,6 @@
                 </svg>
               </button>
               <ul class="hero__contact-list">
-                <!-- <li class="hero__contact-item hero__contact-item--geo">
-                  <a href="#" class="hero__contact-link">
-                    <svg class="hero__contact-svg">
-                      <use href="./images/icon-sprite.svg#geo"></use>
-                    </svg>
-                    5C77+QV2 Parakar 0069
-                    <br />
-                    <span> Yerevan, Armenia </span>
-                  </a>
-                </li> -->
                 <li class="hero__contact-item hero__contact-item--mail">
                   <a href="info@gmg.am" class="hero__contact-link">
                     <svg class="hero__contact-svg hero__contact-svg--mail">
@@ -259,31 +249,72 @@
       <div class="services-container">
         <div class="container">
           <section class="services">
-            <ul>
-              <li style="background-image: url('./images/services_1.jpg')"></li>
-              <li style="background-image: url('./images/services_2.jpg')"></li>
-              <li style="background-image: url('./images/services_3.jpg')"></li>
-              <li style="background-image: url('./images/services_4.jpg')"></li>
-            </ul>
-            <h2>
-              Services &
-              <span>Products</span>
-              <svg class="dot" fill="#fff">
-                <use href="./images/icon-sprite.svg#hexagon-green"></use>
-              </svg>
-            </h2>
-            <p>
-              We maintain a vast warehouse of electronic parts and components,
-              continuously expanding to meet your evolving needs. To achieve
-              this, we acquire excess stock and obsolete components that are not
-              readily available elsewhere. Furthermore, we are pleased to
-              facilitate the special procurement of components that are not
-              accessible through traditional delivery channels.
-            </p>
-            <p>
-              GM Global is offering a wide range of electronic components, each
-              designed to deliver optimal performance and reliability.
-            </p>
+            <div class="services__list">
+              <ul class="services__items">
+                <li class="services__item_1">
+                  <img
+                    class="services__item--bacground"
+                    src="./images/services_1.jpg"
+                    alt="Services & Products"
+                  />
+                </li>
+                <li class="services__item services__item_2">
+                  <img
+                    class="services__item--img services__item--2"
+                    src="./images/services_2.jpg"
+                    alt="Services & Products"
+                  />
+                </li>
+                <li class="services__item services__item_3">
+                  <img
+                    class="services__item--img services__item--3"
+                    src="./images/services_3.jpg"
+                    alt="Services & Products"
+                  />
+                </li>
+                <li class="services__item services__item_4">
+                  <img
+                    class="services__item--img services__item--4"
+                    src="./images/services_4.jpg"
+                    alt="Services & Products"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="services__content">
+              <h2 class="services__title">
+                Services &amp; <span class="services__subtitle">Products</span>
+                <svg class="dot services__dot" fill="#fff">
+                  <use href="./images/icon-sprite.svg#hexagon-green"></use>
+                </svg>
+              </h2>
+              <p class="services__text">
+                We maintain a vast warehouse of electronic parts and components,
+                continuously expanding to meet your evolving needs. To achieve
+                this, we acquire excess stock and obsolete components that are
+                not readily available elsewhere. Furthermore, we are pleased to
+                facilitate the special procurement of components that are not
+                accessible through traditional delivery channels.
+              </p>
+              <p class="services__text">
+                GM Global is offering a wide range of electronic components,
+                each designed to deliver optimal performance and reliability.
+              </p>
+              <button class="button services__button">
+                <svg class="button-svg">
+                  <use href="./images/icon-sprite.svg#button-contact"></use>
+                  <text
+                    x="40%"
+                    y="50%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                    class="hero__contact-text"
+                  >
+                    Contact us
+                  </text>
+                </svg>
+              </button>
+            </div>
           </section>
         </div>
       </div>

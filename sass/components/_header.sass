@@ -11,8 +11,7 @@
   background-color: #fff
   transition: background-color 0.5s ease
 
-  @media (max-width: 1023px)
-    transition: background-color 0.5s ease-in-out
+  @media (max-width: 1024px)
     &.is-open
       display: block
       background-color: inherit
@@ -21,8 +20,7 @@
       overflow: hidden
     &.beckdrop-scroll
       overflow-y: scroll
-
-  @include large-screen
+  @media (min-width: 1025px)
     padding-top: 20px
 
 .header__content
@@ -36,16 +34,13 @@
   cursor: pointer
 
 .header__logo-svg
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     display: block
     width: 145px
     height: 45.94px
     &.is-open
       display: none
-    @include large-screen
-      width: 236px
-      height: 75
-  @include large-screen
+  @media (min-width: 1025px)
     height: 50.05px
     width: 158px
     border-radius: 0px
@@ -55,7 +50,7 @@
   height: 45.94px
   display: none
 
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     display: block
     &.is-open
       display: none
@@ -78,7 +73,7 @@
   font-weight: 700
   line-height: 21px
   letter-spacing: 0em
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     display: none
     &.is-open
       display: block
@@ -105,7 +100,7 @@
     transform: translateX(-116%)
 
 .header__menu
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     display: none
     &.is-open
       position: absolute
@@ -118,7 +113,7 @@
 
 .header__contact
   display: none
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     &.is-open
       position: absolute
       width: 100%
@@ -187,7 +182,7 @@
   opacity: 0.5
 
 .header__menu-btn
-  @include large-screen
+  @media (min-width: 1025px)
     display: none
 
 .header__menu-button
@@ -210,41 +205,38 @@
 
 .header__nav-list
   display: flex
-  @media (max-width: 1023px)
+  @media (max-width: 1024px)
     flex-direction: column
-
-  @include large-screen
-
+  @media (min-width: 1025px)
     flex-direction: row
 
 .header__nav-item
   text-transform: uppercase
+  margin: 0 auto 32px auto
 
-  @media (max-width: 1023px)
-    margin: 0 auto 32px auto
-
-  @include large-screen
+  @media (min-width: 1025px)
+    margin: auto
+    &:not(:last-child)
+      margin-right: 20px
+  @media (min-width: 1200px)
     &:not(:last-child)
       margin-right: 39px
-      @media (min-width: 1024px) and (max-width: 1199px)
-        margin-right: 10px
 
 .header__nav-link
-  font-size: 17px
   font-weight: 700
+  font-size: 17px
   line-height: 23px
   letter-spacing: 0em
   transition: color 0.25s ease
+  color: $white-color
 
-  @media (max-width: 1023px)
-    color: $white-color
-
-  @include large-screen
+  @media (min-width: 1025px)
     color: $switch-text-color
 
   &:hover,
   &:focus
     color: $hover-second-color
 
-  @media (min-width: 1024px) and (max-width: 1199px)
-    font-size: 15px
+  @media (min-width: 1025px)
+    font-size: 14px
+    line-height: 19px
