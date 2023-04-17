@@ -5102,6 +5102,9 @@ body {
   }
 }
 
+.services {
+  padding: 56px 0 21px 0;
+}
 @media (min-width: 1025px) {
   .services {
     display: -webkit-box;
@@ -5118,9 +5121,7 @@ body {
 }
 
 .services__list {
-  padding: 56px 0 21px 0;
-  margin: 0 auto;
-  width: 100%;
+  position: relative;
 }
 @media (min-width: 1025px) {
   .services__list {
@@ -5137,12 +5138,20 @@ body {
 }
 
 .services__items {
-  position: relative;
-}
-
-.services__item--bacground {
-  display: block;
+  position: static;
+  background-color: #48b57f;
+  height: 5px;
   width: calc(100% - 1.5px);
+}
+@media (min-width: 1025px) {
+  .services__items {
+    height: 322px;
+  }
+}
+@media (min-width: 1200px) {
+  .services__items {
+    height: 389px;
+  }
 }
 
 .services__item {
@@ -5155,6 +5164,12 @@ body {
 @media (min-width: 1025px) {
   .services__item {
     left: 5px;
+    width: 440px;
+  }
+}
+@media (min-width: 1200px) {
+  .services__item {
+    width: 527px;
   }
 }
 
@@ -5213,8 +5228,12 @@ body {
     opacity: 0;
   }
 }
+.services__content {
+  margin-top: 80%;
+}
 @media (min-width: 1025px) {
   .services__content {
+    margin-top: 0;
     width: 435px;
   }
 }
@@ -5270,4 +5289,53 @@ body {
   .services__button {
     margin-top: 15px;
   }
+}
+
+.products {
+  padding: 41px 0 55px 0;
+}
+@media (min-width: 1025px) {
+  .products {
+    padding: 64px 0 62px 0;
+  }
+}
+
+.products__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 123px;
+  padding: 23px 26px 23px 20px;
+}
+.products__item:hover, .products__item:focus {
+  cursor: pointer;
+}
+
+.products__title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+
+.products__icon {
+  width: 41px;
+  height: 15px;
+}
+
+.products__description {
+  display: none;
+  color: #DEDEDE;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
 }/*# sourceMappingURL=main.css.map */

@@ -22,19 +22,21 @@
       href="./icon/favicon-16x16.png"
     />
     <style>
-      @media (max-width: 1023px) {
+      .hero-container {
+        background-image: url("./images/hero-bg-mobile.jpg");
+        background-size: cover;
+        height: 680px;
+      }
+      @media (min-width: 1024px) {
         .hero-container {
-          background-image: url("./images/hero-bg-mobile.jpg");
-          background-size: cover;
-          height: 680px;
+          background-image: none;
+          height: auto;
         }
       }
-      @media (max-width: 1023px) {
-        .services-container {
-          background-image: url("images/services-mobile-bg.jpg");
-          background-size: cover;
-          height: 1828px;
-        }
+      .services-container {
+        background-image: url("images/services-mobile-bg.jpg");
+        background-size: cover;
+        min-height: 1828px;
       }
       @media (min-width: 1024px) {
         .services-container {
@@ -43,6 +45,87 @@
           height: 1275px;
         }
       }
+      .products__item--1 {
+        background-image: url("images/products-1.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--1 {
+          background-image: url("images/products-desk-1.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--2 {
+        background-image: url("images/products-2.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--2 {
+          background-image: url("images/products-desk-2.jpg");
+          background-size: cover;
+          width: 100%;
+        } */
+      /* } */
+      .products__item--3 {
+        background-image: url("images/products-3.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--3 {
+          background-image: url("images/products-desk-3.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--4 {
+        background-image: url("images/products-4.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--4 {
+          background-image: url("images/products-desk-4.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--5 {
+        background-image: url("images/products-5.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--5 {
+          background-image: url("images/products-desk-5.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--6 {
+        background-image: url("images/products-6.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--6 {
+          background-image: url("images/products-desk-6.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--7 {
+        background-image: url("images/products-7.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--7 {
+          background-image: url("images/products-desk-7.jpg");
+          background-size: cover;
+        }
+      } */
+      .products__item--8 {
+        background-image: url("images/products-8.jpg");
+        background-size: cover;
+      }
+      /* @media (min-width: 1024px) {
+        .products__item--8 {
+          background-image: url("images/products-desk-8.jpg");
+          background-size: cover;
+        }
+      } */
     </style>
   </head>
 
@@ -256,13 +339,10 @@
           <section class="services">
             <div class="services__list">
               <ul class="services__items">
-                <li class="services__item_1">
-                  <img
-                    class="services__item--bacground"
-                    src="./images/services_1.jpg"
-                    alt="Services & Products"
-                  />
-                </li>
+                <!-- <li class="services__item_1">
+                  <div class="services__item--bacground"></div>
+                  src="./images/services_1.jpg"
+                </li> -->
                 <li class="services__item services__item_2">
                   <img
                     class="services__item--img services__item--2"
@@ -320,6 +400,104 @@
                 </svg>
               </button>
             </div>
+          </section>
+          <section class="products">
+            <ul class="products__list">
+              <li class="products__item products__item--1">
+                <h3 class="products__title">Discrete Semiconductors</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  These components are designed for a specific application and
+                  operate as single units. They include transistors, diodes, and
+                  thyristors, among others.
+                </p>
+              </li>
+              <li class="products__item products__item--2">
+                <h3 class="products__title">
+                  Integrated Processors and Controllers
+                </h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  These components are designed to perform a specific function,
+                  such as controlling a motor or processing data. They include
+                  microcontrollers, digital signal processors, and
+                  field-programmable gate arrays (FPGAs), among others.
+                </p>
+              </li>
+              <li class="products__item products__item--3">
+                <h3 class="products__title">Integrated circuits</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  These components combine multiple electronic components into a
+                  single chip, enabling efficient and cost-effective operation.
+                  They include operational amplifiers, voltage regulators, and
+                  logic gates, among others.
+                </p>
+              </li>
+              <li class="products__item products__item--4">
+                <h3 class="products__title">LED lights</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  Our selection of LED lights offers efficient and long-lasting
+                  lighting solutions for a range of applications. They include
+                  standard bulbs, strip lights, and modules, among others.
+                </p>
+              </li>
+              <li class="products__item products__item--5">
+                <h3 class="products__title">HF Semiconductors</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  These high-frequency semiconductors are designed for use in
+                  radio frequency (RF) applications. They include amplifiers,
+                  oscillators, and transceivers, among others.
+                </p>
+              </li>
+              <li class="products__item products__item--6">
+                <h3 class="products__title">Memory ICs</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  Our memory ICs are used to store and retrieve digital
+                  information. They include ROM, RAM, and flash memory, among
+                  others.
+                </p>
+              </li>
+              <li class="products__item products__item--7">
+                <h3 class="products__title">Sensors</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  Our range of sensors includes components that detect and
+                  measure physical quantities such as temperature, pressure, and
+                  light. They include accelerometers, gyroscopes, and
+                  temperature sensors, among others.
+                </p>
+              </li>
+              <li class="products__item products__item--8">
+                <h3 class="products__title">Optoelectronics</h3>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+                <p class="products__description">
+                  Our optoelectronics components combine electronics and optics
+                  to enable communication and sensing through light. They
+                  include photodiodes, LEDs, and fiber optic transceivers, among
+                  others.
+                </p>
+              </li>
+            </ul>
           </section>
         </div>
       </div>
