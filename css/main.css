@@ -4280,10 +4280,17 @@ body {
   top: 0;
 }
 
-@media (max-width: 1023px) {
+main {
+  padding-top: 83px;
+}
+@media (min-width: 1025px) {
   main {
-    padding-top: 83px;
+    padding-top: 92px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -4439,7 +4446,7 @@ body {
 }
 @media (min-width: 1025px) {
   .hero {
-    margin-top: 152px;
+    margin-top: 60px;
     padding-bottom: 58px;
   }
 }
@@ -5117,9 +5124,15 @@ body {
 }
 @media (min-width: 1025px) {
   .services__list {
-    width: 527px;
-    margin: 0;
+    height: 325px;
+    width: 439px;
     padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .services__list {
+    width: 527px;
   }
 }
 
@@ -5201,6 +5214,11 @@ body {
   }
 }
 @media (min-width: 1025px) {
+  .services__content {
+    width: 435px;
+  }
+}
+@media (min-width: 1200px) {
   .services__content {
     width: 483px;
   }
