@@ -5,8 +5,11 @@
     padding-bottom: 58px
 
 .hero-container
+  background-size: cover
+  height: 680px
   @media (min-width: 1025px)
     position: relative
+    height: auto
 
 .hero
   position: relative
@@ -192,3 +195,11 @@
 .hero__arrow-btn:focus .hero__arrow-btn--arrow
   fill: $second-color
   transform: translate(-50%, 0)
+
+.hero__halfhex
+  background-repeat: no-repeat
+  background-size: contain
+  position: absolute
+  right: 0
+  width: 111px
+  height: 551px

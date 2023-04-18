@@ -24,22 +24,24 @@
     <style>
       .hero-container {
         background-image: url("./images/hero-bg-mobile.jpg");
-        background-size: cover;
-        height: 680px;
       }
       @media (min-width: 1024px) {
         .hero-container {
           background-image: none;
-          height: auto;
         }
       }
-      .services-container {
+      @media (min-width: 1024px) {
+        .hero__halfhex {
+        background-image: url('./images/half-hex.jpg')"
+        }
+      }
+      .services-and-products-container {
         background-image: url("images/services-mobile-bg.jpg");
         background-size: cover;
         min-height: 1828px;
       }
       @media (min-width: 1024px) {
-        .services-container {
+        .services-and-products-container {
           background-image: url("images/services-desktop-bg.jpg");
           background-size: cover;
           height: 1275px;
@@ -47,83 +49,67 @@
       }
       .products__item--1 {
         background-image: url("images/products-1.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--1 {
           background-image: url("images/products-desk-1.jpg");
-          background-size: cover;
         }
       } */
       .products__item--2 {
         background-image: url("images/products-2.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--2 {
           background-image: url("images/products-desk-2.jpg");
-          background-size: cover;
           width: 100%;
         } */
       /* } */
       .products__item--3 {
         background-image: url("images/products-3.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--3 {
           background-image: url("images/products-desk-3.jpg");
-          background-size: cover;
         }
       } */
       .products__item--4 {
         background-image: url("images/products-4.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--4 {
           background-image: url("images/products-desk-4.jpg");
-          background-size: cover;
         }
       } */
       .products__item--5 {
         background-image: url("images/products-5.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--5 {
           background-image: url("images/products-desk-5.jpg");
-          background-size: cover;
         }
       } */
       .products__item--6 {
         background-image: url("images/products-6.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--6 {
           background-image: url("images/products-desk-6.jpg");
-          background-size: cover;
         }
       } */
       .products__item--7 {
         background-image: url("images/products-7.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--7 {
           background-image: url("images/products-desk-7.jpg");
-          background-size: cover;
         }
       } */
       .products__item--8 {
         background-image: url("images/products-8.jpg");
-        background-size: cover;
       }
       /* @media (min-width: 1024px) {
         .products__item--8 {
           background-image: url("images/products-desk-8.jpg");
-          background-size: cover;
         }
       } */
     </style>
@@ -149,7 +135,7 @@
                 <a href="#" class="header__nav-link">First screen</a>
               </li>
               <li class="header__nav-item">
-                <a href="#services" class="header__nav-link"
+                <a href="#services-and-products" class="header__nav-link"
                   >Services and Products</a
                 >
               </li>
@@ -168,7 +154,12 @@
         <div class="header__contact">
           <ul class="header__contact-list">
             <li class="header__contact-item header__contact-item--geo">
-              <a href="#" class="header__contact-link">
+              <a
+                href="https://goo.gl/maps/u99Wnz6Vcq7GsEhx6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="header__contact-link"
+              >
                 <svg class="header__contact-svg">
                   <use href="./images/icon-sprite.svg#geo"></use>
                 </svg>
@@ -178,7 +169,7 @@
               </a>
             </li>
             <li class="header__contact-item header__contact-item--mail">
-              <a href="info@gmg.am" class="header__contact-link">
+              <a href="mailto:info@gmg.am" class="header__contact-link">
                 <svg class="header__contact-svg header__contact-svg--mail">
                   <use href="./images/icon-sprite.svg#letter"></use>
                 </svg>
@@ -238,6 +229,7 @@
       </div>
     </header>
     <main>
+      <div class="hero__halfhex"></div>
       <div class="hero-container">
         <div class="container">
           <section class="hero">
@@ -276,7 +268,7 @@
               </button>
               <ul class="hero__contact-list">
                 <li class="hero__contact-item hero__contact-item--mail">
-                  <a href="info@gmg.am" class="hero__contact-link">
+                  <a href="mailto:info@gmg.am" class="hero__contact-link">
                     <svg class="hero__contact-svg hero__contact-svg--mail">
                       <use href="./images/icon-sprite.svg#letter"></use>
                     </svg>
@@ -313,14 +305,10 @@
               class="hero__image"
               style="background-image: url('./images/Hero-img.jpg')"
             ></div>
-            <div
-              class="hero__halfhex"
-              style="background-image: url('./images/half-hex.png')"
-            ></div>
 
             <div class="hero__arrow-container">
               <button
-                onclick="location.href='#services'"
+                onclick="location.href='#services-and-products'"
                 class="hero__arrow-btn"
               >
                 <svg class="hero__arrow-btn--hex">
@@ -334,20 +322,17 @@
           </section>
         </div>
       </div>
-      <div id="services" class="services-container">
+      <div id="services-and-products" class="services-and-products-container">
         <div class="container">
           <section class="services">
             <div class="services__list">
               <ul class="services__items">
-                <!-- <li class="services__item_1">
-                  <div class="services__item--bacground"></div>
-                  src="./images/services_1.jpg"
-                </li> -->
                 <li class="services__item services__item_2">
                   <img
                     class="services__item--img services__item--2"
                     src="./images/services_2.jpg"
                     alt="Services & Products"
+                    loading="lazy"
                   />
                 </li>
                 <li class="services__item services__item_3">
@@ -355,6 +340,7 @@
                     class="services__item--img services__item--3"
                     src="./images/services_3.jpg"
                     alt="Services & Products"
+                    loading="lazy"
                   />
                 </li>
                 <li class="services__item services__item_4">
@@ -362,6 +348,7 @@
                     class="services__item--img services__item--4"
                     src="./images/services_4.jpg"
                     alt="Services & Products"
+                    loading="lazy"
                   />
                 </li>
               </ul>
@@ -408,7 +395,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   These components are designed for a specific application and
                   operate as single units. They include transistors, diodes, and
                   thyristors, among others.
@@ -421,7 +408,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   These components are designed to perform a specific function,
                   such as controlling a motor or processing data. They include
                   microcontrollers, digital signal processors, and
@@ -433,7 +420,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   These components combine multiple electronic components into a
                   single chip, enabling efficient and cost-effective operation.
                   They include operational amplifiers, voltage regulators, and
@@ -445,7 +432,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   Our selection of LED lights offers efficient and long-lasting
                   lighting solutions for a range of applications. They include
                   standard bulbs, strip lights, and modules, among others.
@@ -456,7 +443,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   These high-frequency semiconductors are designed for use in
                   radio frequency (RF) applications. They include amplifiers,
                   oscillators, and transceivers, among others.
@@ -467,7 +454,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   Our memory ICs are used to store and retrieve digital
                   information. They include ROM, RAM, and flash memory, among
                   others.
@@ -478,7 +465,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   Our range of sensors includes components that detect and
                   measure physical quantities such as temperature, pressure, and
                   light. They include accelerometers, gyroscopes, and
@@ -490,7 +477,7 @@
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description">
+                <p class="products__description visually-hidden">
                   Our optoelectronics components combine electronics and optics
                   to enable communication and sensing through light. They
                   include photodiodes, LEDs, and fiber optic transceivers, among

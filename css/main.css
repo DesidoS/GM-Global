@@ -4451,9 +4451,14 @@ body {
   }
 }
 
+.hero-container {
+  background-size: cover;
+  height: 680px;
+}
 @media (min-width: 1025px) {
   .hero-container {
     position: relative;
+    height: auto;
   }
 }
 
@@ -4735,6 +4740,15 @@ body {
           transform: translate(-50%, 0);
 }
 
+.hero__halfhex {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  width: 111px;
+  height: 551px;
+}
+
 .header {
   position: fixed;
   z-index: 999;
@@ -4838,6 +4852,7 @@ body {
   padding: 2px 3px;
   width: 58px;
   height: 28px;
+  cursor: pointer;
   border-radius: 55px;
   background-color: #d9d9d9;
   color: #3c423e;
@@ -4892,7 +4907,7 @@ body {
   }
   .header__menu.is-open {
     position: absolute;
-    top: 94px;
+    top: 88px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -5018,6 +5033,7 @@ body {
   border: none;
   background-color: #ffffff;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__menu-close {
@@ -5049,6 +5065,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 1025px) {
@@ -5062,23 +5081,15 @@ body {
 
 .header__nav-item {
   text-transform: uppercase;
-  margin: 0 auto 32px auto;
+  padding: 16px;
 }
 @media (min-width: 1025px) {
   .header__nav-item {
     margin: auto;
   }
-  .header__nav-item:not(:last-child) {
-    margin-right: 20px;
-  }
 }
-@media (min-width: 1200px) {
-  .header__nav-item:not(:last-child) {
-    margin-right: 39px;
-  }
-}
-
 .header__nav-link {
+  padding: 16px;
   font-weight: 700;
   font-size: 17px;
   line-height: 23px;
@@ -5301,6 +5312,7 @@ body {
 }
 
 .products__item {
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5332,7 +5344,6 @@ body {
 }
 
 .products__description {
-  display: none;
   color: #DEDEDE;
   font-size: 16px;
   font-weight: 400;

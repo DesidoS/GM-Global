@@ -2,6 +2,7 @@ const header = {
   menuBtn: document.querySelector(".header__menu-button"),
   element: document.querySelector(".header"),
   navList: document.querySelector(".header__nav-list"),
+  navItem: document.querySelectorAll(".header__nav-item"),
   navMenu: document.querySelector(".header__menu"),
   contact: document.querySelector(".header__contact"),
   menuClose: document.querySelector(".header__menu-close"),
@@ -10,7 +11,7 @@ const header = {
   logoFooter: document.querySelector(".header__logo-svg--footer"),
 };
 
-header.menuBtn.addEventListener("click", () => {
+function openBackdrop() {
   window.addEventListener("resize", watchScreenHeight);
 
   watchScreenHeight();
@@ -30,14 +31,16 @@ header.menuBtn.addEventListener("click", () => {
   header.navMenu.classList.toggle("is-open");
   header.menuClose.classList.toggle("is-open");
 
-  const state = header.element.classList.contains("is-open");
-
-  if (!state) {
+  if (!header.element.classList.contains("is-open")) {
     window.removeEventListener("resize", watchScreenHeight);
+    header.element.classList.remove("beckdrop-scroll");
   }
-});
+}
 
 function watchScreenHeight() {
   if (window.innerHeight > 698) return;
-  document.querySelector(".header").classList.toggle("beckdrop-scroll");
+  header.element.classList.add("beckdrop-scroll");
 }
+
+header.menuBtn.addEventListener("click", openBackdrop);
+header.navItem.forEach((el) => el.addEventListener("click", openBackdrop));
