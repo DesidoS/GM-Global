@@ -32,7 +32,7 @@
       }
       @media (min-width: 1024px) {
         .hero__halfhex {
-        background-image: url('./images/half-hex.jpg')"
+          background-image: url("./images/half-hex.jpg");
         }
       }
       .services-and-products-container {
@@ -50,68 +50,86 @@
       .products__item--1 {
         background-image: url("images/products-1.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--1 {
           background-image: url("images/products-desk-1.jpg");
         }
-      } */
+      }
       .products__item--2 {
         background-image: url("images/products-2.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--2 {
           background-image: url("images/products-desk-2.jpg");
           width: 100%;
-        } */
-      /* } */
+        }
+      }
       .products__item--3 {
         background-image: url("images/products-3.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--3 {
           background-image: url("images/products-desk-3.jpg");
         }
-      } */
+      }
       .products__item--4 {
         background-image: url("images/products-4.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--4 {
           background-image: url("images/products-desk-4.jpg");
         }
-      } */
+      }
       .products__item--5 {
         background-image: url("images/products-5.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--5 {
           background-image: url("images/products-desk-5.jpg");
         }
-      } */
+      }
       .products__item--6 {
         background-image: url("images/products-6.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--6 {
           background-image: url("images/products-desk-6.jpg");
         }
-      } */
+      }
       .products__item--7 {
         background-image: url("images/products-7.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--7 {
           background-image: url("images/products-desk-7.jpg");
         }
-      } */
+      }
       .products__item--8 {
         background-image: url("images/products-8.jpg");
       }
-      /* @media (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .products__item--8 {
           background-image: url("images/products-desk-8.jpg");
         }
-      } */
+      }
+      .partners-container {
+        background-image: url("images/partners-mobile.jpg");
+      }
+      @media (min-width: 1024px) {
+        .partners-container {
+          background-image: url("images/partners-1024.jpg");
+        }
+      }
+      @media (min-width: 1920px) {
+        .partners-container {
+          background-image: url("images/partners-1920.jpg");
+        }
+      }
+      @media (min-width: 2560px) {
+        .partners-container {
+          background-image: url("images/partners-2560.jpg");
+        }
+      }
     </style>
   </head>
 
@@ -392,97 +410,157 @@
             <ul class="products__list">
               <li class="products__item products__item--1">
                 <h3 class="products__title">Discrete Semiconductors</h3>
-                <svg class="products__icon">
-                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
-                </svg>
-                <p class="products__description visually-hidden">
+                <p class="products__description">
                   These components are designed for a specific application and
                   operate as single units. They include transistors, diodes, and
                   thyristors, among others.
                 </p>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
               </li>
               <li class="products__item products__item--2">
                 <h3 class="products__title">
                   Integrated Processors and Controllers
                 </h3>
-                <svg class="products__icon">
-                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
-                </svg>
-                <p class="products__description visually-hidden">
+                <p class="products__description">
                   These components are designed to perform a specific function,
                   such as controlling a motor or processing data. They include
                   microcontrollers, digital signal processors, and
                   field-programmable gate arrays (FPGAs), among others.
                 </p>
-              </li>
-              <li class="products__item products__item--3">
-                <h3 class="products__title">Integrated circuits</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--3">
+                <h3 class="products__title">Integrated circuits</h3>
+                <p class="products__description">
                   These components combine multiple electronic components into a
                   single chip, enabling efficient and cost-effective operation.
                   They include operational amplifiers, voltage regulators, and
                   logic gates, among others.
                 </p>
-              </li>
-              <li class="products__item products__item--4">
-                <h3 class="products__title">LED lights</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--4">
+                <h3 class="products__title">LED lights</h3>
+                <p class="products__description">
                   Our selection of LED lights offers efficient and long-lasting
                   lighting solutions for a range of applications. They include
                   standard bulbs, strip lights, and modules, among others.
                 </p>
-              </li>
-              <li class="products__item products__item--5">
-                <h3 class="products__title">HF Semiconductors</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--5">
+                <h3 class="products__title">HF Semiconductors</h3>
+                <p class="products__description">
                   These high-frequency semiconductors are designed for use in
                   radio frequency (RF) applications. They include amplifiers,
                   oscillators, and transceivers, among others.
                 </p>
-              </li>
-              <li class="products__item products__item--6">
-                <h3 class="products__title">Memory ICs</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--6">
+                <h3 class="products__title">Memory ICs</h3>
+                <p class="products__description">
                   Our memory ICs are used to store and retrieve digital
                   information. They include ROM, RAM, and flash memory, among
                   others.
                 </p>
-              </li>
-              <li class="products__item products__item--7">
-                <h3 class="products__title">Sensors</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--7">
+                <h3 class="products__title">Sensors</h3>
+                <p class="products__description">
                   Our range of sensors includes components that detect and
                   measure physical quantities such as temperature, pressure, and
                   light. They include accelerometers, gyroscopes, and
                   temperature sensors, among others.
                 </p>
-              </li>
-              <li class="products__item products__item--8">
-                <h3 class="products__title">Optoelectronics</h3>
                 <svg class="products__icon">
                   <use href="./images/icon-sprite.svg#Arrow-products"></use>
                 </svg>
-                <p class="products__description visually-hidden">
+              </li>
+              <li class="products__item products__item--8">
+                <h3 class="products__title">Optoelectronics</h3>
+                <p class="products__description">
                   Our optoelectronics components combine electronics and optics
                   to enable communication and sensing through light. They
                   include photodiodes, LEDs, and fiber optic transceivers, among
                   others.
                 </p>
+                <svg class="products__icon">
+                  <use href="./images/icon-sprite.svg#Arrow-products"></use>
+                </svg>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="partners-container">
+        <div class="container">
+          <section class="partners partners--section">
+            <h2 class="partners__title">
+              Working <span class="partners__subtitle">with:</span>
+            </h2>
+            <ul class="partners__list">
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--digi-key">
+                    <use href="./images/icon-sprite.svg#digi-key"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--mouser">
+                    <use href="./images/icon-sprite.svg#mouser"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--rs">
+                    <use href="./images/icon-sprite.svg#rs"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--microchip">
+                    <use href="./images/icon-sprite.svg#microchip"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--hubersuhner">
+                    <use href="./images/icon-sprite.svg#hubersuhner"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--texas">
+                    <use href="./images/icon-sprite.svg#texas"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="partners__item">
+                <a class="partners__link" href="#">
+                  <svg class="partners__icon partners__icon--tti">
+                    <use href="./images/icon-sprite.svg#tti"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
