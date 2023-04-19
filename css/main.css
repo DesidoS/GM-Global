@@ -5326,14 +5326,11 @@ body {
   height: 123px;
   padding: 23px 20px 23px 20px;
   overflow: hidden;
+  border: #6C7073 3px solid;
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
   background-size: cover;
-}
-@media (min-width: 768px) {
-  .products__item {
-    background-size: cover;
-  }
+  background-position: center;
 }
 .products__item.active {
   height: 330px;
