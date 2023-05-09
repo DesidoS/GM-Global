@@ -1,0 +1,62 @@
+.button
+  display: inline-block
+  padding: 0
+  width: 210px
+  height: 37px
+
+  cursor: pointer
+  background-size: cover
+  background-color: transparent
+  border: none
+  font-size: 16px
+  font-weight: 700
+  line-height: 22px
+  letter-spacing: 0em
+  text-align: center
+  color: $white-color
+  fill: $accent-colors
+  animation: change-color 5s ease-in infinite
+  transition: all 0.5s ease-in
+
+@keyframes change-color
+  0%
+    fill: $accent-colors
+
+  25%
+    fill: $accent-colors
+
+  50%
+    fill: $accent-second-colors
+
+  75%
+    fill: $accent-colors
+
+  100%
+    fill: $accent-colors
+
+.button:hover,
+.button:focus
+  animation: button-animation 3s ease-in infinite
+
+@keyframes button-animation
+  0%
+    fill: $accent-colors
+
+  25%
+    fill: $active-color
+
+  50%
+    fill: $btn-active-second-color
+
+  75%
+    fill: $active-color
+
+  100%
+    fill: $accent-colors
+
+.hero__contact-text
+  fill: $white-color
+
+.button-svg
+  width: 210px
+  height: 37px

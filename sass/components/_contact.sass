@@ -1,0 +1,132 @@
+.contact-gradient
+    background: linear-gradient(to left, rgba(21, 21, 21, 0.8),rgba(21, 21, 21, 0.8))
+    
+.contact
+    padding: 45px 0 65px 0
+    @media (min-width: 1025px)
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        padding: 41px 0 41px 0
+
+.contact-container
+    background-size: cover
+    background-position: center
+
+    @media (min-width: 1025px)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+
+.contact__bg
+    display: none
+    @media (min-width: 1025px)
+        display: block
+        position: absolute
+        top: 0
+        width: 50%
+        height: 100%
+
+        background-color: $accent-colors
+        opacity: 0.8
+
+.contact__icon
+    display: none
+    @media (min-width: 1025px)
+        display: block
+        position: absolute
+        width: 92px
+
+        fill: $white-color
+
+.contact__title
+
+    margin-bottom: 17px
+    color: $stroke-color
+
+    font-size: 24px
+    font-weight: 700
+    line-height: 30px
+    letter-spacing: 0em
+
+    @media (min-width: 1025px)
+        margin-bottom: 0
+        font-size: 45px
+        line-height: 53px
+        width: 80%
+
+.contact__subtitle
+    color: $white-color
+    @media (min-width: 1025px)
+
+.contact__form
+    padding: 35px
+    border: 1px solid $white-color
+    border-radius: 25px
+    backdrop-filter: blur(7.5px)
+    @media (min-width: 1025px)
+        backdrop-filter: blur(12.5px)
+        width: 357px
+
+.input
+    padding: 5px 13px
+    margin-bottom: 17px
+
+    width: 100%
+
+    background: $white-color
+    border: 1px solid $form-border
+    border-radius: 2px
+
+    &::placeholder
+        color: $general-text-color
+
+        font-family: Open Sans
+        font-size: 14px
+        font-weight: 700
+        line-height: 23px
+        letter-spacing: 0em
+        text-align: left
+        @media (min-width: 1025px)
+            font-weight: 400
+
+.input_textarea
+    height: 66px
+    resize: none
+
+.form__contact-svg
+    fill: $btn-active-second-color
+    animation: form-change-color 5s ease-in infinite
+    transition: all 0.5s ease-in
+
+@keyframes form-change-color
+    0%
+        fill: $btn-active-second-color
+    25%
+        fill: $btn-active-second-color
+    50%
+        fill: $active-color
+    75%
+        fill: $btn-active-second-color
+    100%
+        fill: $btn-active-second-color
+
+.form__contact-svg:hover,
+.form__contact-svg:focus
+    animation-name: form-animation
+    animation-duration: 3s
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+
+@keyframes form-animation
+    0%
+        fill: $btn-active-second-color
+    25%
+        fill: $btn-active-second-color
+    50%
+        fill: $accent-second-colors
+    75%
+        fill: $btn-active-second-color
+    100%
+        fill: $btn-active-second-color
